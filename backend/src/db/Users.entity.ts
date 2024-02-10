@@ -6,8 +6,8 @@ export class UsersEntity {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column("integer",{nullable: true})
-userId: number;
+  @Column("text",{nullable: true})
+userId: string;
 
 @Column("text",{nullable: true})
 email: string;
