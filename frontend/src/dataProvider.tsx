@@ -9,7 +9,7 @@ const fieldConfig = {
     Users: [
   {
     "field": "userId",
-    "datatype": "Integer"
+    "datatype": "String"
   },
   {
     "field": "email",
@@ -27,10 +27,10 @@ const fieldConfig = {
 Cards: [
   {
     "field": "cardId",
-    "datatype": "Integer"
+    "datatype": "String"
   },
   {
-    "field": "setId",
+    "field": "setid",
     "datatype": "Integer"
   },
   {
@@ -54,7 +54,7 @@ Cards: [
     "datatype": "String"
   },
   {
-    "field": "imageUrl",
+    "field": "imageurl",
     "datatype": "String"
   },
   {
@@ -65,7 +65,7 @@ Cards: [
 Sets: [
   {
     "field": "setId",
-    "datatype": "Integer"
+    "datatype": "String"
   },
   {
     "field": "setName",
