@@ -9,8 +9,8 @@ export class CardsEntity {
   @Column("text",{nullable: true})
 cardId: string;
 
-@Column("text",{nullable: true})
-setid: string;
+@Column("integer",{nullable: true})
+setid: number;
 
 @Column("text",{nullable: true})
 cardName: string;
