@@ -57,8 +57,8 @@ const InventoryTitle = () => {
 export const InventoryList = () => (
       <List actions={<ListActions  />} filters={ResourceFilters} >
         <DatagridConfigurable>
-          <TextField source="userId" />
-<TextField source="cardId" />
+          <ReferenceField source="userId" reference="Users"  />
+<ReferenceField source="cardId" reference="Cards"  />
 <DateField source="recordedDate" /><EditButton />
 
         </DatagridConfigurable>
@@ -68,8 +68,8 @@ export const InventoryList = () => (
 export const InventoryEdit = () => (
                     <Edit title={<InventoryTitle />}>
                       <SimpleForm>
-                          <TextInput source="userId"   />
-<TextInput source="cardId"   />
+                          <ReferenceInput source="userId"  reference="Users"   />
+<ReferenceInput source="cardId"  reference="Cards"   />
 <DateInput source="recordedDate"   />
                       </SimpleForm>
                     </Edit>
@@ -78,8 +78,8 @@ export const InventoryEdit = () => (
 export const InventoryCreate = () => (
                                   <Create>
                                     <SimpleForm>
-                                        <TextInput source="userId"   />
-<TextInput source="cardId"   />
+                                        <ReferenceInput source="userId"  reference="Users"   />
+<ReferenceInput source="cardId"  reference="Cards"   />
 <DateInput source="recordedDate"   />
                                     </SimpleForm>
                                   </Create>
@@ -87,8 +87,8 @@ export const InventoryCreate = () => (
 
 const ResourceFilters = [
       <TextInput source="q" label="Search" alwaysOn />,
-,
-,
+<ReferenceInput source="userId" label="userId" reference="Users"   alwaysOn/>,
+<ReferenceInput source="cardId" label="cardId" reference="Cards"   alwaysOn/>,
 ,
 
     ];
