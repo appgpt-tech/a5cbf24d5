@@ -30,15 +30,7 @@ Cards: [
     "datatype": "Integer"
   },
   {
-    "field": "setId",
-    "datatype": "Integer"
-  },
-  {
     "field": "cardName",
-    "datatype": "String"
-  },
-  {
-    "field": "serial",
     "datatype": "String"
   },
   {
@@ -48,72 +40,6 @@ Cards: [
   {
     "field": "rarity",
     "datatype": "String"
-  },
-  {
-    "field": "condition",
-    "datatype": "String"
-  },
-  {
-    "field": "imageUrl",
-    "datatype": "String"
-  },
-  {
-    "field": "id",
-    "datatype": "Integer"
-  }
-],
-Sets: [
-  {
-    "field": "setId",
-    "datatype": "Integer"
-  },
-  {
-    "field": "setName",
-    "datatype": "String"
-  },
-  {
-    "field": "releaseDate",
-    "datatype": "DateTime"
-  },
-  {
-    "field": "totalCards",
-    "datatype": "Integer"
-  },
-  {
-    "field": "id",
-    "datatype": "Integer"
-  }
-],
-Inventory: [
-  {
-    "field": "userId",
-    "datatype": "Integer"
-  },
-  {
-    "field": "cardId",
-    "datatype": "Integer"
-  },
-  {
-    "field": "recordedDate",
-    "datatype": "DateTime"
-  },
-  {
-    "field": "id",
-    "datatype": "Integer"
-  }
-],
-Wishlist: [
-  {
-    "field": "userId",
-    "datatype": "Integer"
-  },
-  {
-    "field": "cardId",
-    "datatype": "Integer"
-  },
-  {
-    "field": "insertedDate",
-    "datatype": "DateTime"
   },
   {
     "field": "id",
