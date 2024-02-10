@@ -14,9 +14,9 @@ import { SetsList, SetsCreate, SetsEdit} from "./resources/Sets";
 import { InventoryList, InventoryCreate, InventoryEdit} from "./resources/Inventory";
 import { WishlistList, WishlistCreate, WishlistEdit} from "./resources/Wishlist";
 import UsersIcon from "@mui/icons-material/Person";
-import CardsIcon from "@mui/icons-material/Collections";
-import SetsIcon from "@mui/icons-material/Category";
-import InventoryIcon from "@mui/icons-material/Storage";
+import CardsIcon from "@mui/icons-material/PhotoAlbum";
+import SetsIcon from "@mui/icons-material/CollectionsBookmark";
+import InventoryIcon from "@mui/icons-material/Ballot";
 import WishlistIcon from "@mui/icons-material/Favorite"; 
 // SUPERTOKENS
 import React from "react";
@@ -101,13 +101,13 @@ icon={SetsIcon}/>
 list={InventoryList}
 create={InventoryCreate}
 edit={InventoryEdit}
-recordRepresentation="userId"
+recordRepresentation="id"
 icon={InventoryIcon}/>
 <Resource name="Wishlist" options={{label:"Wishlist"}} 
 list={WishlistList}
 create={WishlistCreate}
 edit={WishlistEdit}
-recordRepresentation="userId"
+recordRepresentation="id"
 icon={WishlistIcon}/>
     <CustomRoutes noLayout>
       {/*This renders the login UI on the /auth route*/}
