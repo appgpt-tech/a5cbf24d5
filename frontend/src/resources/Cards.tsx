@@ -58,13 +58,13 @@ export const CardsList = () => (
       <List actions={<ListActions  />} filters={ResourceFilters} >
         <DatagridConfigurable>
           <NumberField source="cardId" />
-<ReferenceField source="setid" reference="Sets"  />
+<ReferenceField source="setId" reference="Sets"  />
 <TextField source="cardName" />
 <TextField source="serial" />
 <TextField source="type" />
 <TextField source="rarity" />
 <TextField source="condition" />
-<UrlField source="imageurl" /><EditButton />
+<ImageField source="imageUrl" /><EditButton />
 
         </DatagridConfigurable>
       </List>
@@ -74,13 +74,13 @@ export const CardsEdit = () => (
                     <Edit title={<CardsTitle />}>
                       <SimpleForm>
                           <NumberInput source="cardId"   />
-<ReferenceInput source="setid"  reference="Sets"   />
+<ReferenceInput source="setId"  reference="Sets"   />
 <TextInput source="cardName"   />
 <TextInput source="serial"   />
 <TextInput source="type"   />
 <TextInput source="rarity"   />
 <TextInput source="condition"   />
-<TextInput source="imageurl"   />
+<ImageInput source="imageUrl"   />
                       </SimpleForm>
                     </Edit>
                   );
@@ -89,13 +89,13 @@ export const CardsCreate = () => (
                                   <Create>
                                     <SimpleForm>
                                         <NumberInput source="cardId"   />
-<ReferenceInput source="setid"  reference="Sets"   />
+<ReferenceInput source="setId"  reference="Sets"   />
 <TextInput source="cardName"   />
 <TextInput source="serial"   />
 <TextInput source="type"   />
 <TextInput source="rarity"   />
 <TextInput source="condition"   />
-<TextInput source="imageurl"   />
+<ImageInput source="imageUrl"   />
                                     </SimpleForm>
                                   </Create>
                                 );
@@ -103,7 +103,7 @@ export const CardsCreate = () => (
 const ResourceFilters = [
       <TextInput source="q" label="Search" alwaysOn />,
 ,
-<ReferenceInput source="setid" label="setid" reference="Sets"   alwaysOn/>,
+<ReferenceInput source="setId" label="setId" reference="Sets"   alwaysOn/>,
 ,
 ,
 ,
