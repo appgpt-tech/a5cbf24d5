@@ -6,17 +6,17 @@ export class CardsEntity {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column("text",{nullable: true})
-cardId: string;
+  @Column("integer",{nullable: true})
+cardId: number;
 
 @Column("integer",{nullable: true})
 setid: number;
 
 @Column("text",{nullable: true})
-cardName: string;
+name: string;
 
-@Column("text",{nullable: true})
-serial: string;
+@Column("integer",{nullable: true})
+serial: number;
 
 @Column("text",{nullable: true})
 type: string;
