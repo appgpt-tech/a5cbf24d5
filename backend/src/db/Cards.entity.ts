@@ -13,10 +13,10 @@ cardId: number;
 setid: number;
 
 @Column("text",{nullable: true})
-name: string;
+cardName: string;
 
-@Column("integer",{nullable: true})
-serial: number;
+@Column("text",{nullable: true})
+serial: string;
 
 @Column("text",{nullable: true})
 type: string;
