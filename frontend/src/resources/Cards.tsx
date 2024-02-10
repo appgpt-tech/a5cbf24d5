@@ -58,7 +58,7 @@ export const CardsList = () => (
       <List actions={<ListActions  />} filters={ResourceFilters} >
         <DatagridConfigurable>
           <TextField source="cardId" />
-<ReferenceField source="setid" reference="Sets"  />
+<TextField source="setid" />
 <TextField source="cardName" />
 <TextField source="serial" />
 <TextField source="type" />
@@ -74,7 +74,7 @@ export const CardsEdit = () => (
                     <Edit title={<CardsTitle />}>
                       <SimpleForm>
                           <TextInput source="cardId"   />
-<ReferenceInput source="setid"  reference="Sets"   />
+<TextInput source="setid"   />
 <TextInput source="cardName"   />
 <TextInput source="serial"   />
 <TextInput source="type"   />
@@ -89,7 +89,7 @@ export const CardsCreate = () => (
                                   <Create>
                                     <SimpleForm>
                                         <TextInput source="cardId"   />
-<ReferenceInput source="setid"  reference="Sets"   />
+<TextInput source="setid"   />
 <TextInput source="cardName"   />
 <TextInput source="serial"   />
 <TextInput source="type"   />
@@ -103,7 +103,7 @@ export const CardsCreate = () => (
 const ResourceFilters = [
       <TextInput source="q" label="Search" alwaysOn />,
 ,
-<ReferenceInput source="setid" label="setid" reference="Sets"   alwaysOn/>,
+,
 ,
 ,
 ,
