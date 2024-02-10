@@ -6,11 +6,11 @@ export class CardsEntity {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column("integer",{nullable: true})
-cardId: number;
+  @Column("text",{nullable: true})
+cardId: string;
 
 @Column("integer",{nullable: true})
-setId: number;
+setid: number;
 
 @Column("text",{nullable: true})
 cardName: string;
@@ -28,7 +28,7 @@ rarity: string;
 condition: string;
 
 @Column("text",{nullable: true})
-imageUrl: string;
+imageurl: string;
 
 
 }
