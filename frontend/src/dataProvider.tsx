@@ -30,7 +30,7 @@ Cards: [
     "datatype": "Integer"
   },
   {
-    "field": "setid",
+    "field": "setId",
     "datatype": "Integer"
   },
   {
@@ -54,7 +54,7 @@ Cards: [
     "datatype": "String"
   },
   {
-    "field": "imageurl",
+    "field": "imageUrl",
     "datatype": "String"
   },
   {
