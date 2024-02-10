@@ -15,8 +15,8 @@ setid: number;
 @Column("text",{nullable: true})
 cardName: string;
 
-@Column("text",{nullable: true})
-serial: string;
+@Column("integer",{nullable: true})
+serial: number;
 
 @Column("text",{nullable: true})
 type: string;
@@ -28,7 +28,7 @@ rarity: string;
 condition: string;
 
 @Column("text",{nullable: true})
-imageurl: string;
+imageUrl: string;
 
 
 }
