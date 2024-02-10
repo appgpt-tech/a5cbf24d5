@@ -57,8 +57,8 @@ const WishlistTitle = () => {
 export const WishlistList = () => (
       <List actions={<ListActions  />} filters={ResourceFilters} >
         <DatagridConfigurable>
-          <TextField source="userId" />
-<TextField source="cardId" />
+          <ReferenceField source="userId" reference="Users"  />
+<ReferenceField source="cardId" reference="Cards"  />
 <DateField source="insertedDate" /><EditButton />
 
         </DatagridConfigurable>
@@ -68,8 +68,8 @@ export const WishlistList = () => (
 export const WishlistEdit = () => (
                     <Edit title={<WishlistTitle />}>
                       <SimpleForm>
-                          <TextInput source="userId"   />
-<TextInput source="cardId"   />
+                          <ReferenceInput source="userId"  reference="Users"   />
+<ReferenceInput source="cardId"  reference="Cards"   />
 <DateInput source="insertedDate"   />
                       </SimpleForm>
                     </Edit>
@@ -78,8 +78,8 @@ export const WishlistEdit = () => (
 export const WishlistCreate = () => (
                                   <Create>
                                     <SimpleForm>
-                                        <TextInput source="userId"   />
-<TextInput source="cardId"   />
+                                        <ReferenceInput source="userId"  reference="Users"   />
+<ReferenceInput source="cardId"  reference="Cards"   />
 <DateInput source="insertedDate"   />
                                     </SimpleForm>
                                   </Create>
@@ -87,8 +87,8 @@ export const WishlistCreate = () => (
 
 const ResourceFilters = [
       <TextInput source="q" label="Search" alwaysOn />,
-,
-,
+<ReferenceInput source="userId" label="userId" reference="Users"   alwaysOn/>,
+<ReferenceInput source="cardId" label="cardId" reference="Cards"   alwaysOn/>,
 ,
 
     ];
