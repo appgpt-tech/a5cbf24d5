@@ -6,8 +6,8 @@ export class SetsEntity {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column("text",{nullable: true})
-setId: string;
+  @Column("integer",{nullable: true})
+setId: number;
 
 @Column("text",{nullable: true})
 setName: string;
