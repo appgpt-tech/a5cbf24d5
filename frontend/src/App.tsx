@@ -14,7 +14,7 @@ import { SetsList, SetsCreate, SetsEdit} from "./resources/Sets";
 import { InventoryList, InventoryCreate, InventoryEdit} from "./resources/Inventory";
 import { WishlistList, WishlistCreate, WishlistEdit} from "./resources/Wishlist";
 import UsersIcon from "@mui/icons-material/Person";
-import CardsIcon from "@mui/icons-material/Collections";
+import CardsIcon from "@mui/icons-material/CreditCard";
 import SetsIcon from "@mui/icons-material/Category";
 import InventoryIcon from "@mui/icons-material/Inventory2";
 import WishlistIcon from "@mui/icons-material/Favorite"; 
