@@ -57,7 +57,7 @@ const UsersTitle = () => {
 export const UsersList = () => (
       <List actions={<ListActions  />} filters={ResourceFilters} >
         <DatagridConfigurable>
-          <TextField source="userId" />
+          <NumberField source="userId" />
 <EmailField source="email" />
 <TextField source="name" /><EditButton />
 
@@ -68,7 +68,7 @@ export const UsersList = () => (
 export const UsersEdit = () => (
                     <Edit title={<UsersTitle />}>
                       <SimpleForm>
-                          <TextInput source="userId"   />
+                          <NumberInput source="userId"   />
 <TextInput source="email"   />
 <TextInput source="name"   />
                       </SimpleForm>
@@ -78,7 +78,7 @@ export const UsersEdit = () => (
 export const UsersCreate = () => (
                                   <Create>
                                     <SimpleForm>
-                                        <TextInput source="userId"   />
+                                        <NumberInput source="userId"   />
 <TextInput source="email"   />
 <TextInput source="name"   />
                                     </SimpleForm>
