@@ -57,14 +57,14 @@ const CardsTitle = () => {
 export const CardsList = () => (
       <List actions={<ListActions  />} filters={ResourceFilters} >
         <DatagridConfigurable>
-          <NumberField source="cardId" />
-<ReferenceField source="setId" reference="Sets"  />
+          <TextField source="cardId" />
+<ReferenceField source="setid" reference="Sets"  />
 <TextField source="cardName" />
 <TextField source="serial" />
 <TextField source="type" />
 <TextField source="rarity" />
 <TextField source="condition" />
-<UrlField source="imageUrl" /><EditButton />
+<UrlField source="imageurl" /><EditButton />
 
         </DatagridConfigurable>
       </List>
@@ -73,14 +73,14 @@ export const CardsList = () => (
 export const CardsEdit = () => (
                     <Edit title={<CardsTitle />}>
                       <SimpleForm>
-                          <NumberInput source="cardId"   />
-<ReferenceInput source="setId"  reference="Sets"   />
+                          <TextInput source="cardId"   />
+<ReferenceInput source="setid"  reference="Sets"   />
 <TextInput source="cardName"   />
 <TextInput source="serial"   />
 <TextInput source="type"   />
 <TextInput source="rarity"   />
 <TextInput source="condition"   />
-<TextInput source="imageUrl"   />
+<TextInput source="imageurl"   />
                       </SimpleForm>
                     </Edit>
                   );
@@ -88,14 +88,14 @@ export const CardsEdit = () => (
 export const CardsCreate = () => (
                                   <Create>
                                     <SimpleForm>
-                                        <NumberInput source="cardId"   />
-<ReferenceInput source="setId"  reference="Sets"   />
+                                        <TextInput source="cardId"   />
+<ReferenceInput source="setid"  reference="Sets"   />
 <TextInput source="cardName"   />
 <TextInput source="serial"   />
 <TextInput source="type"   />
 <TextInput source="rarity"   />
 <TextInput source="condition"   />
-<TextInput source="imageUrl"   />
+<TextInput source="imageurl"   />
                                     </SimpleForm>
                                   </Create>
                                 );
@@ -103,7 +103,7 @@ export const CardsCreate = () => (
 const ResourceFilters = [
       <TextInput source="q" label="Search" alwaysOn />,
 ,
-<ReferenceInput source="setId" label="setId" reference="Sets"   alwaysOn/>,
+<ReferenceInput source="setid" label="setid" reference="Sets"   alwaysOn/>,
 ,
 ,
 ,
