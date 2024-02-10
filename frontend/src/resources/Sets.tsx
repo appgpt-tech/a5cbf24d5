@@ -57,7 +57,7 @@ const SetsTitle = () => {
 export const SetsList = () => (
       <List actions={<ListActions  />} filters={ResourceFilters} >
         <DatagridConfigurable>
-          <NumberField source="setId" />
+          <TextField source="setId" />
 <TextField source="setName" />
 <DateField source="releaseDate" />
 <NumberField source="totalCards" /><EditButton />
@@ -69,7 +69,7 @@ export const SetsList = () => (
 export const SetsEdit = () => (
                     <Edit title={<SetsTitle />}>
                       <SimpleForm>
-                          <NumberInput source="setId"   />
+                          <TextInput source="setId"   />
 <TextInput source="setName"   />
 <DateInput source="releaseDate"   />
 <NumberInput source="totalCards"   />
@@ -80,7 +80,7 @@ export const SetsEdit = () => (
 export const SetsCreate = () => (
                                   <Create>
                                     <SimpleForm>
-                                        <NumberInput source="setId"   />
+                                        <TextInput source="setId"   />
 <TextInput source="setName"   />
 <DateInput source="releaseDate"   />
 <NumberInput source="totalCards"   />
