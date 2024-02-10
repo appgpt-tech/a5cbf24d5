@@ -13,11 +13,11 @@ import { CardsList, CardsCreate, CardsEdit} from "./resources/Cards";
 import { SetsList, SetsCreate, SetsEdit} from "./resources/Sets";
 import { InventoryList, InventoryCreate, InventoryEdit} from "./resources/Inventory";
 import { WishlistList, WishlistCreate, WishlistEdit} from "./resources/Wishlist";
-import UsersIcon from "@mui/icons-material/Person";
+import UsersIcon from "@mui/icons-material/Group";
 import CardsIcon from "@mui/icons-material/Collections";
-import SetsIcon from "@mui/icons-material/ViewModule";
-import InventoryIcon from "@mui/icons-material/Inventory";
-import WishlistIcon from "@mui/icons-material/Star"; 
+import SetsIcon from "@mui/icons-material/ViewList";
+import InventoryIcon from "@mui/icons-material/Store";
+import WishlistIcon from "@mui/icons-material/Favorite"; 
 // SUPERTOKENS
 import React from "react";
 import SuperTokens, {
