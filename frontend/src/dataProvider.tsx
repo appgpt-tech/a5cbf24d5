@@ -31,7 +31,7 @@ Cards: [
   },
   {
     "field": "setid",
-    "datatype": "Integer"
+    "datatype": "String"
   },
   {
     "field": "cardName",
@@ -87,11 +87,11 @@ Sets: [
 Inventory: [
   {
     "field": "userId",
-    "datatype": "Integer"
+    "datatype": "String"
   },
   {
     "field": "cardId",
-    "datatype": "Integer"
+    "datatype": "String"
   },
   {
     "field": "recordedDate",
@@ -105,11 +105,11 @@ Inventory: [
 Wishlist: [
   {
     "field": "userId",
-    "datatype": "Integer"
+    "datatype": "String"
   },
   {
     "field": "cardId",
-    "datatype": "Integer"
+    "datatype": "String"
   },
   {
     "field": "insertedDate",
