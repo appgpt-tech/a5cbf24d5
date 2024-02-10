@@ -51,7 +51,7 @@ const ListActions = () => (
 );
 const WishlistTitle = () => {
   const record = useRecordContext();
-  return <span>Wishlist {record ? `"${ record.userId }"` : ""}</span>;
+  return <span>Wishlist {record ? `"${ record.id }"` : ""}</span>;
 };
 
 export const WishlistList = () => (
