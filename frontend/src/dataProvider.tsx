@@ -39,7 +39,7 @@ Cards: [
   },
   {
     "field": "serial",
-    "datatype": "String"
+    "datatype": "Integer"
   },
   {
     "field": "type",
@@ -54,7 +54,7 @@ Cards: [
     "datatype": "String"
   },
   {
-    "field": "imageurl",
+    "field": "imageUrl",
     "datatype": "String"
   },
   {
