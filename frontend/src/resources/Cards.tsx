@@ -57,14 +57,14 @@ const CardsTitle = () => {
 export const CardsList = () => (
       <List actions={<ListActions  />} filters={ResourceFilters} >
         <DatagridConfigurable>
-          <TextField source="cardId" />
+          <NumberField source="cardId" />
 <ReferenceField source="setid" reference="Sets"  />
-<TextField source="cardName" />
-<TextField source="serial" />
+<TextField source="name" />
+<NumberField source="serial" />
 <TextField source="type" />
 <TextField source="rarity" />
 <TextField source="condition" />
-<UrlField source="imageurl" /><EditButton />
+<ImageField source="imageurl" /><EditButton />
 
         </DatagridConfigurable>
       </List>
@@ -73,14 +73,14 @@ export const CardsList = () => (
 export const CardsEdit = () => (
                     <Edit title={<CardsTitle />}>
                       <SimpleForm>
-                          <TextInput source="cardId"   />
+                          <NumberInput source="cardId"   />
 <ReferenceInput source="setid"  reference="Sets"   />
-<TextInput source="cardName"   />
-<TextInput source="serial"   />
+<TextInput source="name"   />
+<NumberInput source="serial"   />
 <TextInput source="type"   />
 <TextInput source="rarity"   />
 <TextInput source="condition"   />
-<TextInput source="imageurl"   />
+<ImageInput source="imageurl"   />
                       </SimpleForm>
                     </Edit>
                   );
@@ -88,14 +88,14 @@ export const CardsEdit = () => (
 export const CardsCreate = () => (
                                   <Create>
                                     <SimpleForm>
-                                        <TextInput source="cardId"   />
+                                        <NumberInput source="cardId"   />
 <ReferenceInput source="setid"  reference="Sets"   />
-<TextInput source="cardName"   />
-<TextInput source="serial"   />
+<TextInput source="name"   />
+<NumberInput source="serial"   />
 <TextInput source="type"   />
 <TextInput source="rarity"   />
 <TextInput source="condition"   />
-<TextInput source="imageurl"   />
+<ImageInput source="imageurl"   />
                                     </SimpleForm>
                                   </Create>
                                 );
