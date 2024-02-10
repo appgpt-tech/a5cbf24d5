@@ -59,12 +59,12 @@ export const CardsList = () => (
         <DatagridConfigurable>
           <NumberField source="cardId" />
 <ReferenceField source="setid" reference="Sets"  />
-<TextField source="name" />
-<NumberField source="serial" />
+<TextField source="cardName" />
+<TextField source="serial" />
 <TextField source="type" />
 <TextField source="rarity" />
 <TextField source="condition" />
-<ImageField source="imageurl" /><EditButton />
+<UrlField source="imageurl" /><EditButton />
 
         </DatagridConfigurable>
       </List>
@@ -75,12 +75,12 @@ export const CardsEdit = () => (
                       <SimpleForm>
                           <NumberInput source="cardId"   />
 <ReferenceInput source="setid"  reference="Sets"   />
-<TextInput source="name"   />
-<NumberInput source="serial"   />
+<TextInput source="cardName"   />
+<TextInput source="serial"   />
 <TextInput source="type"   />
 <TextInput source="rarity"   />
 <TextInput source="condition"   />
-<ImageInput source="imageurl"   />
+<TextInput source="imageurl"   />
                       </SimpleForm>
                     </Edit>
                   );
@@ -90,12 +90,12 @@ export const CardsCreate = () => (
                                     <SimpleForm>
                                         <NumberInput source="cardId"   />
 <ReferenceInput source="setid"  reference="Sets"   />
-<TextInput source="name"   />
-<NumberInput source="serial"   />
+<TextInput source="cardName"   />
+<TextInput source="serial"   />
 <TextInput source="type"   />
 <TextInput source="rarity"   />
 <TextInput source="condition"   />
-<ImageInput source="imageurl"   />
+<TextInput source="imageurl"   />
                                     </SimpleForm>
                                   </Create>
                                 );
