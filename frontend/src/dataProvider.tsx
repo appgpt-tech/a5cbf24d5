@@ -34,12 +34,12 @@ Cards: [
     "datatype": "Integer"
   },
   {
-    "field": "name",
+    "field": "cardName",
     "datatype": "String"
   },
   {
     "field": "serial",
-    "datatype": "Integer"
+    "datatype": "String"
   },
   {
     "field": "type",
