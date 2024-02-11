@@ -4,8 +4,8 @@
     import enOriginal from 'ra-language-english';
 import frOriginal from 'ra-language-french';
 
-    const enResources = { resources: {"Users":{"name":"Users","fields":{"userId":"User Id","email":"Email","name":"Name","id":"id"}},"Cards":{"name":"Cards","fields":{"cardId":"Card Id","cardName":"Card Name","type":"Type","rarity":"Rarity","id":"id"}}}};
-const frResources = { resources: {"Users":{"name":"Utilisateurs","fields":{"userId":"Identifiant de l'utilisateur","email":"Email","name":"Nom","id":"id"}},"Cards":{"name":"Cartes","fields":{"cardId":"Id de Carte","cardName":"Nom de la Carte","type":"Type","rarity":"Rarité","id":"id"}}}};
+    const enResources = { resources: {"Users":{"name":"Users","fields":{"":"","id":"id"}},"Cards":{"name":"Cards","fields":{"":"","id":"id"}},"Sets":{"name":"Sets","fields":{"":"","id":"id"}},"Inventory":{"name":"Inventory","fields":{"":"","id":"id"}},"Wishlist":{"name":"Wishlist","fields":{"":"","id":"id"}}}};
+const frResources = { resources: {"Users":{"name":"Users (fr)","fields":{"":" (fr)","id":"id"}},"Cards":{"name":"Cards (fr)","fields":{"":" (fr)","id":"id"}},"Sets":{"name":"Sets (fr)","fields":{"":" (fr)","id":"id"}},"Inventory":{"name":"Inventory (fr)","fields":{"":" (fr)","id":"id"}},"Wishlist":{"name":"Wishlist (fr)","fields":{"":" (fr)","id":"id"}}}};
 
 
     const en = mergeTranslations(enOriginal,enResources);
