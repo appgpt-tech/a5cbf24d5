@@ -6,14 +6,23 @@ export class UsersEntity {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column("integer",{nullable: true})
-userId: number;
+  @Column("text",{nullable: true})
+: string;
 
 @Column("text",{nullable: true})
-email: string;
+: string;
 
 @Column("text",{nullable: true})
-name: string;
+: string;
+
+@Column("text",{nullable: true})
+: string;
+
+@Column("text",{nullable: true})
+: string;
+
+@Column("text",{nullable: true})
+: string;
 
 
 }
