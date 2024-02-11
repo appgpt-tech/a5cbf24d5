@@ -6,14 +6,23 @@ export class WishlistEntity {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column("integer",{nullable: true})
-userId: number;
+  @Column("text",{nullable: true})
+: string;
 
-@Column("integer",{nullable: true})
-cardId: number;
+@Column("text",{nullable: true})
+: string;
 
-@Column("date",{nullable: true})
-insertedDate: Date;
+@Column("text",{nullable: true})
+: string;
+
+@Column("text",{nullable: true})
+: string;
+
+@Column("text",{nullable: true})
+: string;
+
+@Column("text",{nullable: true})
+: string;
 
 
 }
