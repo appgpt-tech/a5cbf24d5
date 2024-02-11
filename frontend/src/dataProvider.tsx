@@ -8,15 +8,27 @@ import qs from 'qs';
 const fieldConfig = {
     Users: [
   {
-    "field": "userId",
-    "datatype": "Integer"
-  },
-  {
-    "field": "email",
+    "field": "",
     "datatype": "String"
   },
   {
-    "field": "name",
+    "field": "",
+    "datatype": "String"
+  },
+  {
+    "field": "",
+    "datatype": "String"
+  },
+  {
+    "field": "",
+    "datatype": "String"
+  },
+  {
+    "field": "",
+    "datatype": "String"
+  },
+  {
+    "field": "",
     "datatype": "String"
   },
   {
@@ -26,19 +38,149 @@ const fieldConfig = {
 ],
 Cards: [
   {
-    "field": "cardId",
+    "field": "",
+    "datatype": "String"
+  },
+  {
+    "field": "",
+    "datatype": "String"
+  },
+  {
+    "field": "",
+    "datatype": "String"
+  },
+  {
+    "field": "",
+    "datatype": "String"
+  },
+  {
+    "field": "",
+    "datatype": "String"
+  },
+  {
+    "field": "",
+    "datatype": "String"
+  },
+  {
+    "field": "",
+    "datatype": "String"
+  },
+  {
+    "field": "",
+    "datatype": "String"
+  },
+  {
+    "field": "",
+    "datatype": "String"
+  },
+  {
+    "field": "",
+    "datatype": "String"
+  },
+  {
+    "field": "",
+    "datatype": "String"
+  },
+  {
+    "field": "id",
     "datatype": "Integer"
-  },
+  }
+],
+Sets: [
   {
-    "field": "cardName",
+    "field": "",
     "datatype": "String"
   },
   {
-    "field": "type",
+    "field": "",
     "datatype": "String"
   },
   {
-    "field": "rarity",
+    "field": "",
+    "datatype": "String"
+  },
+  {
+    "field": "",
+    "datatype": "String"
+  },
+  {
+    "field": "",
+    "datatype": "String"
+  },
+  {
+    "field": "",
+    "datatype": "String"
+  },
+  {
+    "field": "",
+    "datatype": "String"
+  },
+  {
+    "field": "",
+    "datatype": "String"
+  },
+  {
+    "field": "",
+    "datatype": "String"
+  },
+  {
+    "field": "id",
+    "datatype": "Integer"
+  }
+],
+Inventory: [
+  {
+    "field": "",
+    "datatype": "String"
+  },
+  {
+    "field": "",
+    "datatype": "String"
+  },
+  {
+    "field": "",
+    "datatype": "String"
+  },
+  {
+    "field": "",
+    "datatype": "String"
+  },
+  {
+    "field": "",
+    "datatype": "String"
+  },
+  {
+    "field": "",
+    "datatype": "String"
+  },
+  {
+    "field": "id",
+    "datatype": "Integer"
+  }
+],
+Wishlist: [
+  {
+    "field": "",
+    "datatype": "String"
+  },
+  {
+    "field": "",
+    "datatype": "String"
+  },
+  {
+    "field": "",
+    "datatype": "String"
+  },
+  {
+    "field": "",
+    "datatype": "String"
+  },
+  {
+    "field": "",
+    "datatype": "String"
+  },
+  {
+    "field": "",
     "datatype": "String"
   },
   {
