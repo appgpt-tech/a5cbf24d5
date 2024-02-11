@@ -51,18 +51,15 @@ const ListActions = () => (
 );
 const UsersTitle = () => {
   const record = useRecordContext();
-  return <span>Users {record ? `"${ record.id }"` : ""}</span>;
+  return <span>Users {record ? `"${ record.userId }"` : ""}</span>;
 };
 
 export const UsersList = () => (
       <List actions={<ListActions  />} filters={ResourceFilters} >
         <DatagridConfigurable>
-          <TextField source="" />
-<TextField source="" />
-<TextField source="" />
-<TextField source="" />
-<TextField source="" />
-<TextField source="" /><EditButton />
+          <NumberField source="userId" />
+<EmailField source="email" />
+<TextField source="name" /><EditButton />
 
         </DatagridConfigurable>
       </List>
@@ -71,12 +68,9 @@ export const UsersList = () => (
 export const UsersEdit = () => (
                     <Edit title={<UsersTitle />}>
                       <SimpleForm>
-                          <TextInput source=""   />
-<TextInput source=""   />
-<TextInput source=""   />
-<TextInput source=""   />
-<TextInput source=""   />
-<TextInput source=""   />
+                          <NumberInput source="userId"   />
+<TextInput source="email"   />
+<TextInput source="name"   />
                       </SimpleForm>
                     </Edit>
                   );
@@ -84,21 +78,15 @@ export const UsersEdit = () => (
 export const UsersCreate = () => (
                                   <Create>
                                     <SimpleForm>
-                                        <TextInput source=""   />
-<TextInput source=""   />
-<TextInput source=""   />
-<TextInput source=""   />
-<TextInput source=""   />
-<TextInput source=""   />
+                                        <NumberInput source="userId"   />
+<TextInput source="email"   />
+<TextInput source="name"   />
                                     </SimpleForm>
                                   </Create>
                                 );
 
 const ResourceFilters = [
       <TextInput source="q" label="Search" alwaysOn />,
-,
-,
-,
 ,
 ,
 ,
