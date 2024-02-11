@@ -57,9 +57,12 @@ const InventoryTitle = () => {
 export const InventoryList = () => (
       <List actions={<ListActions  />} filters={ResourceFilters} >
         <DatagridConfigurable>
-          <ReferenceField source="userId" reference="Users"  />
-<ReferenceField source="cardId" reference="Cards"  />
-<DateField source="recordedDate" /><EditButton />
+          <TextField source="" />
+<TextField source="" />
+<TextField source="" />
+<TextField source="" />
+<TextField source="" />
+<TextField source="" /><EditButton />
 
         </DatagridConfigurable>
       </List>
@@ -68,9 +71,12 @@ export const InventoryList = () => (
 export const InventoryEdit = () => (
                     <Edit title={<InventoryTitle />}>
                       <SimpleForm>
-                          <ReferenceInput source="userId"  reference="Users"   />
-<ReferenceInput source="cardId"  reference="Cards"   />
-<DateInput source="recordedDate"   />
+                          <TextInput source=""   />
+<TextInput source=""   />
+<TextInput source=""   />
+<TextInput source=""   />
+<TextInput source=""   />
+<TextInput source=""   />
                       </SimpleForm>
                     </Edit>
                   );
@@ -78,17 +84,23 @@ export const InventoryEdit = () => (
 export const InventoryCreate = () => (
                                   <Create>
                                     <SimpleForm>
-                                        <ReferenceInput source="userId"  reference="Users"   />
-<ReferenceInput source="cardId"  reference="Cards"   />
-<DateInput source="recordedDate"   />
+                                        <TextInput source=""   />
+<TextInput source=""   />
+<TextInput source=""   />
+<TextInput source=""   />
+<TextInput source=""   />
+<TextInput source=""   />
                                     </SimpleForm>
                                   </Create>
                                 );
 
 const ResourceFilters = [
       <TextInput source="q" label="Search" alwaysOn />,
-<ReferenceInput source="userId" label="userId" reference="Users"   alwaysOn/>,
-<ReferenceInput source="cardId" label="cardId" reference="Cards"   alwaysOn/>,
+,
+,
+,
+,
+,
 ,
 
     ];
