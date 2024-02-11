@@ -51,16 +51,23 @@ const ListActions = () => (
 );
 const CardsTitle = () => {
   const record = useRecordContext();
-  return <span>Cards {record ? `"${ record.cardId }"` : ""}</span>;
+  return <span>Cards {record ? `"${ record.id }"` : ""}</span>;
 };
 
 export const CardsList = () => (
       <List actions={<ListActions  />} filters={ResourceFilters} >
         <DatagridConfigurable>
-          <NumberField source="cardId" />
-<TextField source="cardName" />
-<TextField source="type" />
-<TextField source="rarity" /><EditButton />
+          <TextField source="" />
+<TextField source="" />
+<TextField source="" />
+<TextField source="" />
+<TextField source="" />
+<TextField source="" />
+<TextField source="" />
+<TextField source="" />
+<TextField source="" />
+<TextField source="" />
+<TextField source="" /><EditButton />
 
         </DatagridConfigurable>
       </List>
@@ -69,10 +76,17 @@ export const CardsList = () => (
 export const CardsEdit = () => (
                     <Edit title={<CardsTitle />}>
                       <SimpleForm>
-                          <NumberInput source="cardId"   />
-<TextInput source="cardName"   />
-<TextInput source="type"   />
-<TextInput source="rarity"   />
+                          <TextInput source=""   />
+<TextInput source=""   />
+<TextInput source=""   />
+<TextInput source=""   />
+<TextInput source=""   />
+<TextInput source=""   />
+<TextInput source=""   />
+<TextInput source=""   />
+<TextInput source=""   />
+<TextInput source=""   />
+<TextInput source=""   />
                       </SimpleForm>
                     </Edit>
                   );
@@ -80,16 +94,30 @@ export const CardsEdit = () => (
 export const CardsCreate = () => (
                                   <Create>
                                     <SimpleForm>
-                                        <NumberInput source="cardId"   />
-<TextInput source="cardName"   />
-<TextInput source="type"   />
-<TextInput source="rarity"   />
+                                        <TextInput source=""   />
+<TextInput source=""   />
+<TextInput source=""   />
+<TextInput source=""   />
+<TextInput source=""   />
+<TextInput source=""   />
+<TextInput source=""   />
+<TextInput source=""   />
+<TextInput source=""   />
+<TextInput source=""   />
+<TextInput source=""   />
                                     </SimpleForm>
                                   </Create>
                                 );
 
 const ResourceFilters = [
       <TextInput source="q" label="Search" alwaysOn />,
+,
+,
+,
+,
+,
+,
+,
 ,
 ,
 ,
