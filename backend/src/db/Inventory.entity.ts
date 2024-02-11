@@ -6,23 +6,14 @@ export class InventoryEntity {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column("text",{nullable: true})
-: string;
+  @Column("integer",{nullable: true})
+userId: number;
 
-@Column("text",{nullable: true})
-: string;
+@Column("integer",{nullable: true})
+cardId: number;
 
-@Column("text",{nullable: true})
-: string;
-
-@Column("text",{nullable: true})
-: string;
-
-@Column("text",{nullable: true})
-: string;
-
-@Column("text",{nullable: true})
-: string;
+@Column("date",{nullable: true})
+recordedDate: Date;
 
 
 }
