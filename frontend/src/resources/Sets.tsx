@@ -51,21 +51,16 @@ const ListActions = () => (
 );
 const SetsTitle = () => {
   const record = useRecordContext();
-  return <span>Sets {record ? `"${ record.id }"` : ""}</span>;
+  return <span>Sets {record ? `"${ record.setId }"` : ""}</span>;
 };
 
 export const SetsList = () => (
       <List actions={<ListActions  />} filters={ResourceFilters} >
         <DatagridConfigurable>
-          <TextField source="" />
-<TextField source="" />
-<TextField source="" />
-<TextField source="" />
-<TextField source="" />
-<TextField source="" />
-<TextField source="" />
-<TextField source="" />
-<TextField source="" /><EditButton />
+          <NumberField source="setId" />
+<TextField source="setName" />
+<DateField source="releaseDate" />
+<NumberField source="totalCards" /><EditButton />
 
         </DatagridConfigurable>
       </List>
@@ -74,15 +69,10 @@ export const SetsList = () => (
 export const SetsEdit = () => (
                     <Edit title={<SetsTitle />}>
                       <SimpleForm>
-                          <TextInput source=""   />
-<TextInput source=""   />
-<TextInput source=""   />
-<TextInput source=""   />
-<TextInput source=""   />
-<TextInput source=""   />
-<TextInput source=""   />
-<TextInput source=""   />
-<TextInput source=""   />
+                          <NumberInput source="setId"   />
+<TextInput source="setName"   />
+<DateInput source="releaseDate"   />
+<NumberInput source="totalCards"   />
                       </SimpleForm>
                     </Edit>
                   );
@@ -90,26 +80,16 @@ export const SetsEdit = () => (
 export const SetsCreate = () => (
                                   <Create>
                                     <SimpleForm>
-                                        <TextInput source=""   />
-<TextInput source=""   />
-<TextInput source=""   />
-<TextInput source=""   />
-<TextInput source=""   />
-<TextInput source=""   />
-<TextInput source=""   />
-<TextInput source=""   />
-<TextInput source=""   />
+                                        <NumberInput source="setId"   />
+<TextInput source="setName"   />
+<DateInput source="releaseDate"   />
+<NumberInput source="totalCards"   />
                                     </SimpleForm>
                                   </Create>
                                 );
 
 const ResourceFilters = [
       <TextInput source="q" label="Search" alwaysOn />,
-,
-,
-,
-,
-,
 ,
 ,
 ,
