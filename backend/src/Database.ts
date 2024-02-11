@@ -5,6 +5,9 @@ import { SettingsEntity } from "./db/Settings.entity";
 //autogenerate imports based on resources
 import { UsersEntity } from "./db/Users.entity";
 import { CardsEntity } from "./db/Cards.entity";
+import { SetsEntity } from "./db/Sets.entity";
+import { InventoryEntity } from "./db/Inventory.entity";
+import { WishlistEntity } from "./db/Wishlist.entity";
 
 export class Database {
   static dbConfiguration: DBConfiguration;
@@ -15,7 +18,7 @@ export class Database {
     let dbConfig: any = dbConfiguration as any;
     //Autogenerate entities array from resource names
 
-    dbConfig.entities = [SettingsEntity, UsersEntity, CardsEntity];
+    dbConfig.entities = [SettingsEntity, UsersEntity, CardsEntity, SetsEntity, InventoryEntity, WishlistEntity];
     Database.ds = new DataSource(dbConfig);
     await Database.ds.initialize();
 
@@ -25,7 +28,7 @@ export class Database {
     await Database.Seed();
   }
   static async Seed() {
-    let data: any = {"Users":[{"userId":1,"email":"email 1","name":"name 1","id":0},{"userId":2,"email":"email 2","name":"name 2","id":74},{"userId":3,"email":"email 3","name":"name 3","id":37},{"userId":4,"email":"email 4","name":"name 4","id":98},{"userId":5,"email":"email 5","name":"name 5","id":2}],"Cards":[{"cardId":1,"cardName":"cardName 1","type":"type 1","rarity":"rarity 1","id":99},{"cardId":2,"cardName":"cardName 2","type":"type 2","rarity":"rarity 2","id":71},{"cardId":3,"cardName":"cardName 3","type":"type 3","rarity":"rarity 3","id":99},{"cardId":4,"cardName":"cardName 4","type":"type 4","rarity":"rarity 4","id":55},{"cardId":5,"cardName":"cardName 5","type":"type 5","rarity":"rarity 5","id":5}]};
+    let data: any = {"Users":[{"":" 1","id":5},{"":" 2","id":5},{"":" 3","id":62},{"":" 4","id":64},{"":" 5","id":3}],"Cards":[{"":" 1","id":98},{"":" 2","id":86},{"":" 3","id":7},{"":" 4","id":31},{"":" 5","id":28}],"Sets":[{"":" 1","id":67},{"":" 2","id":66},{"":" 3","id":41},{"":" 4","id":3},{"":" 5","id":85}],"Inventory":[{"":" 1","id":1},{"":" 2","id":20},{"":" 3","id":63},{"":" 4","id":5},{"":" 5","id":55}],"Wishlist":[{"":" 1","id":28},{"":" 2","id":69},{"":" 3","id":100},{"":" 4","id":69},{"":" 5","id":24}]};
     //Autogenerate multiple such calls ie for each resource and its data object
     let isSeeded = await this.IsSeeded();
     //if (!isSeeded) {
@@ -33,7 +36,10 @@ export class Database {
     if (true){
       console.log('   Seeding database...');
       await this.SeedResource("UsersEntity", data.Users);
-await this.SeedResource("CardsEntity", data.Cards); 
+await this.SeedResource("CardsEntity", data.Cards);
+await this.SeedResource("SetsEntity", data.Sets);
+await this.SeedResource("InventoryEntity", data.Inventory);
+await this.SeedResource("WishlistEntity", data.Wishlist); 
       await this.SeedResource("SettingsEntity", {
         settingname: "isSeeded",
         settingvalue: "true",
