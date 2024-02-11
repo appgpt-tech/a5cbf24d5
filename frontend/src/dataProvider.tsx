@@ -8,27 +8,15 @@ import qs from 'qs';
 const fieldConfig = {
     Users: [
   {
-    "field": "",
+    "field": "userId",
+    "datatype": "Integer"
+  },
+  {
+    "field": "email",
     "datatype": "String"
   },
   {
-    "field": "",
-    "datatype": "String"
-  },
-  {
-    "field": "",
-    "datatype": "String"
-  },
-  {
-    "field": "",
-    "datatype": "String"
-  },
-  {
-    "field": "",
-    "datatype": "String"
-  },
-  {
-    "field": "",
+    "field": "name",
     "datatype": "String"
   },
   {
@@ -38,47 +26,35 @@ const fieldConfig = {
 ],
 Cards: [
   {
-    "field": "",
+    "field": "cardId",
+    "datatype": "Integer"
+  },
+  {
+    "field": "setId",
+    "datatype": "Integer"
+  },
+  {
+    "field": "cardName",
     "datatype": "String"
   },
   {
-    "field": "",
+    "field": "serial",
     "datatype": "String"
   },
   {
-    "field": "",
+    "field": "type",
     "datatype": "String"
   },
   {
-    "field": "",
+    "field": "rarity",
     "datatype": "String"
   },
   {
-    "field": "",
+    "field": "condition",
     "datatype": "String"
   },
   {
-    "field": "",
-    "datatype": "String"
-  },
-  {
-    "field": "",
-    "datatype": "String"
-  },
-  {
-    "field": "",
-    "datatype": "String"
-  },
-  {
-    "field": "",
-    "datatype": "String"
-  },
-  {
-    "field": "",
-    "datatype": "String"
-  },
-  {
-    "field": "",
+    "field": "imageUrl",
     "datatype": "String"
   },
   {
@@ -88,40 +64,20 @@ Cards: [
 ],
 Sets: [
   {
-    "field": "",
+    "field": "setId",
+    "datatype": "Integer"
+  },
+  {
+    "field": "setName",
     "datatype": "String"
   },
   {
-    "field": "",
-    "datatype": "String"
+    "field": "releaseDate",
+    "datatype": "DateTime"
   },
   {
-    "field": "",
-    "datatype": "String"
-  },
-  {
-    "field": "",
-    "datatype": "String"
-  },
-  {
-    "field": "",
-    "datatype": "String"
-  },
-  {
-    "field": "",
-    "datatype": "String"
-  },
-  {
-    "field": "",
-    "datatype": "String"
-  },
-  {
-    "field": "",
-    "datatype": "String"
-  },
-  {
-    "field": "",
-    "datatype": "String"
+    "field": "totalCards",
+    "datatype": "Integer"
   },
   {
     "field": "id",
@@ -130,28 +86,16 @@ Sets: [
 ],
 Inventory: [
   {
-    "field": "",
-    "datatype": "String"
+    "field": "userId",
+    "datatype": "Integer"
   },
   {
-    "field": "",
-    "datatype": "String"
+    "field": "cardId",
+    "datatype": "Integer"
   },
   {
-    "field": "",
-    "datatype": "String"
-  },
-  {
-    "field": "",
-    "datatype": "String"
-  },
-  {
-    "field": "",
-    "datatype": "String"
-  },
-  {
-    "field": "",
-    "datatype": "String"
+    "field": "recordedDate",
+    "datatype": "DateTime"
   },
   {
     "field": "id",
@@ -160,28 +104,16 @@ Inventory: [
 ],
 Wishlist: [
   {
-    "field": "",
-    "datatype": "String"
+    "field": "userId",
+    "datatype": "Integer"
   },
   {
-    "field": "",
-    "datatype": "String"
+    "field": "cardId",
+    "datatype": "Integer"
   },
   {
-    "field": "",
-    "datatype": "String"
-  },
-  {
-    "field": "",
-    "datatype": "String"
-  },
-  {
-    "field": "",
-    "datatype": "String"
-  },
-  {
-    "field": "",
-    "datatype": "String"
+    "field": "insertedDate",
+    "datatype": "DateTime"
   },
   {
     "field": "id",
