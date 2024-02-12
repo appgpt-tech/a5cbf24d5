@@ -51,16 +51,15 @@ const ListActions = () => (
 );
 const UsersTitle = () => {
   const record = useRecordContext();
-  return <span>Users {record ? `"${ record.username }"` : ""}</span>;
+  return <span>Users {record ? `"${ record.userId }"` : ""}</span>;
 };
 
 export const UsersList = () => (
       <List actions={<ListActions  />} filters={ResourceFilters} >
         <DatagridConfigurable>
-          <TextField source="username" />
+          <NumberField source="userId" />
 <EmailField source="email" />
-<ReadOnlyPasswordField source="password" />
-<TextField source="role" /><EditButton />
+<TextField source="name" /><EditButton />
 
         </DatagridConfigurable>
       </List>
@@ -69,10 +68,9 @@ export const UsersList = () => (
 export const UsersEdit = () => (
                     <Edit title={<UsersTitle />}>
                       <SimpleForm>
-                          <TextInput source="username"   />
+                          <NumberInput source="userId"   />
 <TextInput source="email"   />
-<PasswordInput source="password"   />
-<TextInput source="role"   />
+<TextInput source="name"   />
                       </SimpleForm>
                     </Edit>
                   );
@@ -80,17 +78,15 @@ export const UsersEdit = () => (
 export const UsersCreate = () => (
                                   <Create>
                                     <SimpleForm>
-                                        <TextInput source="username"   />
+                                        <NumberInput source="userId"   />
 <TextInput source="email"   />
-<PasswordInput source="password"   />
-<TextInput source="role"   />
+<TextInput source="name"   />
                                     </SimpleForm>
                                   </Create>
                                 );
 
 const ResourceFilters = [
       <TextInput source="q" label="Search" alwaysOn />,
-,
 ,
 ,
 ,
