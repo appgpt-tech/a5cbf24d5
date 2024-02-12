@@ -51,14 +51,14 @@ const ListActions = () => (
 );
 const SupportTicketsTitle = () => {
   const record = useRecordContext();
-  return <span>SupportTickets {record ? `"${ record.id }"` : ""}</span>;
+  return <span>SupportTickets {record ? `"${ record.userId }"` : ""}</span>;
 };
 
 export const SupportTicketsList = () => (
       <List actions={<ListActions  />} filters={ResourceFilters} >
         <DatagridConfigurable>
-          <ReferenceField source="user" reference="Users"  />
-<ReferenceField source="customer" reference="Customers"  />
+          <ReferenceField source="userId" reference="users"  />
+<ReferenceField source="customerId" reference="customers"  />
 
 <TextField source="status" />
 <DateField source="creationDate" />
@@ -71,8 +71,8 @@ export const SupportTicketsList = () => (
 export const SupportTicketsEdit = () => (
                     <Edit title={<SupportTicketsTitle />}>
                       <SimpleForm>
-                          <ReferenceInput source="user"  reference="Users"   />
-<ReferenceInput source="customer"  reference="Customers"   />
+                          <ReferenceInput source="userId"  reference="users"   />
+<ReferenceInput source="customerId"  reference="customers"   />
 <TextInput source="description"   />
 <TextInput source="status"   />
 <DateInput source="creationDate"   />
@@ -84,8 +84,8 @@ export const SupportTicketsEdit = () => (
 export const SupportTicketsCreate = () => (
                                   <Create>
                                     <SimpleForm>
-                                        <ReferenceInput source="user"  reference="Users"   />
-<ReferenceInput source="customer"  reference="Customers"   />
+                                        <ReferenceInput source="userId"  reference="users"   />
+<ReferenceInput source="customerId"  reference="customers"   />
 <TextInput source="description"   />
 <TextInput source="status"   />
 <DateInput source="creationDate"   />
@@ -96,8 +96,8 @@ export const SupportTicketsCreate = () => (
 
 const ResourceFilters = [
       <TextInput source="q" label="Search" alwaysOn />,
-<ReferenceInput source="user" label="user" reference="Users"   alwaysOn/>,
-<ReferenceInput source="customer" label="customer" reference="Customers"   alwaysOn/>,
+<ReferenceInput source="userId" label="userId" reference="users"   alwaysOn/>,
+<ReferenceInput source="customerId" label="customerId" reference="customers"   alwaysOn/>,
 ,
 ,
 ,
