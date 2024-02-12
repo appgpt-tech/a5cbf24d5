@@ -6,10 +6,7 @@ export class CardsEntity {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column("integer",{nullable: true})
-setname: number;
-
-@Column("text",{nullable: true})
+  @Column("text",{nullable: true})
 cardName: string;
 
 @Column("text",{nullable: true})
@@ -26,6 +23,9 @@ condition: string;
 
 @Column("text",{nullable: true})
 imageUrl: string;
+
+@Column("integer",{nullable: true})
+setId: number;
 
 
 }
