@@ -51,14 +51,14 @@ const ListActions = () => (
 );
 const UsersTitle = () => {
   const record = useRecordContext();
-  return <span>Users {record ? `"${ record.email }"` : ""}</span>;
+  return <span>Users {record ? `"${ record.userName }"` : ""}</span>;
 };
 
 export const UsersList = () => (
       <List actions={<ListActions  />} filters={ResourceFilters} >
         <DatagridConfigurable>
-          <EmailField source="email" />
-<TextField source="name" /><EditButton />
+          <TextField source="userName" />
+<EmailField source="email" /><EditButton />
 
         </DatagridConfigurable>
       </List>
@@ -67,8 +67,8 @@ export const UsersList = () => (
 export const UsersEdit = () => (
                     <Edit title={<UsersTitle />}>
                       <SimpleForm>
-                          <TextInput source="email"   />
-<TextInput source="name"   />
+                          <TextInput source="userName"   />
+<TextInput source="email"   />
                       </SimpleForm>
                     </Edit>
                   );
@@ -76,8 +76,8 @@ export const UsersEdit = () => (
 export const UsersCreate = () => (
                                   <Create>
                                     <SimpleForm>
-                                        <TextInput source="email"   />
-<TextInput source="name"   />
+                                        <TextInput source="userName"   />
+<TextInput source="email"   />
                                     </SimpleForm>
                                   </Create>
                                 );
