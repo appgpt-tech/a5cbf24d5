@@ -6,14 +6,17 @@ export class UsersEntity {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column("integer",{nullable: true})
-userId: number;
+  @Column("text",{nullable: true})
+name: string;
 
 @Column("text",{nullable: true})
 email: string;
 
 @Column("text",{nullable: true})
-name: string;
+password: string;
+
+@Column("text",{nullable: true})
+role: string;
 
 
 }
