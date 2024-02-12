@@ -51,15 +51,14 @@ const ListActions = () => (
 );
 const OrderDetailsTitle = () => {
   const record = useRecordContext();
-  return <span>OrderDetails {record ? `"${ record.id }"` : ""}</span>;
+  return <span>OrderDetails {record ? `"${ record.orderId }"` : ""}</span>;
 };
 
 export const OrderDetailsList = () => (
       <List actions={<ListActions  />} filters={ResourceFilters} >
         <DatagridConfigurable>
-          <ReferenceField source="orderNumber" reference="Orders"  />
-<NumberField source="line" />
-<ReferenceField source="product" reference="Products"  />
+          <ReferenceField source="orderId" reference="orders"  />
+<ReferenceField source="productId" reference="products"  />
 <NumberField source="price" />
 <NumberField source="quantity" /><EditButton />
 
@@ -70,9 +69,8 @@ export const OrderDetailsList = () => (
 export const OrderDetailsEdit = () => (
                     <Edit title={<OrderDetailsTitle />}>
                       <SimpleForm>
-                          <ReferenceInput source="orderNumber"  reference="Orders"   />
-<NumberInput source="line"   />
-<ReferenceInput source="product"  reference="Products"   />
+                          <ReferenceInput source="orderId"  reference="orders"   />
+<ReferenceInput source="productId"  reference="products"   />
 <NumberInput source="price"   />
 <NumberInput source="quantity"   />
                       </SimpleForm>
@@ -82,9 +80,8 @@ export const OrderDetailsEdit = () => (
 export const OrderDetailsCreate = () => (
                                   <Create>
                                     <SimpleForm>
-                                        <ReferenceInput source="orderNumber"  reference="Orders"   />
-<NumberInput source="line"   />
-<ReferenceInput source="product"  reference="Products"   />
+                                        <ReferenceInput source="orderId"  reference="orders"   />
+<ReferenceInput source="productId"  reference="products"   />
 <NumberInput source="price"   />
 <NumberInput source="quantity"   />
                                     </SimpleForm>
@@ -93,9 +90,8 @@ export const OrderDetailsCreate = () => (
 
 const ResourceFilters = [
       <TextInput source="q" label="Search" alwaysOn />,
-<ReferenceInput source="orderNumber" label="orderNumber" reference="Orders"   alwaysOn/>,
-,
-<ReferenceInput source="product" label="product" reference="Products"   alwaysOn/>,
+<ReferenceInput source="orderId" label="orderId" reference="orders"   alwaysOn/>,
+<ReferenceInput source="productId" label="productId" reference="products"   alwaysOn/>,
 ,
 ,
 
