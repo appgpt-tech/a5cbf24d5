@@ -7,7 +7,7 @@ export class InventoryEntity {
   id: number;
 
   @Column("integer",{nullable: true})
-product: number;
+productId: number;
 
 @Column("integer",{nullable: true})
 quantity: number;
