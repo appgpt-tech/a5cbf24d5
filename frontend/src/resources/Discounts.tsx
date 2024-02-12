@@ -51,15 +51,15 @@ const ListActions = () => (
 );
 const DiscountsTitle = () => {
   const record = useRecordContext();
-  return <span>Discounts {record ? `"${ record.productId }"` : ""}</span>;
+  return <span>Discounts {record ? `"${ record.product }"` : ""}</span>;
 };
 
 export const DiscountsList = () => (
       <List actions={<ListActions  />} filters={ResourceFilters} >
         <DatagridConfigurable>
-          <ReferenceField source="productId" reference="products"  />
+          <ReferenceField source="product" reference="Products"  />
 <TextField source="discountType" />
-<TextField source="description" />
+
 <NumberField source="discountAmount" />
 <NumberField source="discountPercent" /><EditButton />
 
@@ -70,7 +70,7 @@ export const DiscountsList = () => (
 export const DiscountsEdit = () => (
                     <Edit title={<DiscountsTitle />}>
                       <SimpleForm>
-                          <ReferenceInput source="productId"  reference="products"   />
+                          <ReferenceInput source="product"  reference="Products"   />
 <TextInput source="discountType"   />
 <TextInput source="description"   />
 <NumberInput source="discountAmount"   />
@@ -82,7 +82,7 @@ export const DiscountsEdit = () => (
 export const DiscountsCreate = () => (
                                   <Create>
                                     <SimpleForm>
-                                        <ReferenceInput source="productId"  reference="products"   />
+                                        <ReferenceInput source="product"  reference="Products"   />
 <TextInput source="discountType"   />
 <TextInput source="description"   />
 <NumberInput source="discountAmount"   />
@@ -93,7 +93,7 @@ export const DiscountsCreate = () => (
 
 const ResourceFilters = [
       <TextInput source="q" label="Search" alwaysOn />,
-<ReferenceInput source="productId" label="productId" reference="products"   alwaysOn/>,
+<ReferenceInput source="product" label="product" reference="Products"   alwaysOn/>,
 ,
 ,
 ,
