@@ -7,10 +7,10 @@ export class InventoryEntity {
   id: number;
 
   @Column("integer",{nullable: true})
-userId: number;
+userName: number;
 
 @Column("integer",{nullable: true})
-cardId: number;
+cardName: number;
 
 @Column("date",{nullable: true})
 recordedDate: Date;
