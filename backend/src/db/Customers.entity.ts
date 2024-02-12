@@ -7,13 +7,13 @@ export class CustomersEntity {
   id: number;
 
   @Column("text",{nullable: true})
+customerName: string;
+
+@Column("text",{nullable: true})
 email: string;
 
 @Column("text",{nullable: true})
 password: string;
-
-@Column("text",{nullable: true})
-name: string;
 
 @Column("text",{nullable: true})
 billingAddress: string;
