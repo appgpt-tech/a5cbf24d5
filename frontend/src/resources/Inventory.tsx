@@ -51,15 +51,16 @@ const ListActions = () => (
 );
 const InventoryTitle = () => {
   const record = useRecordContext();
-  return <span>Inventory {record ? `"${ record.userId }"` : ""}</span>;
+  return <span>Inventory {record ? `"${ record.id }"` : ""}</span>;
 };
 
 export const InventoryList = () => (
       <List actions={<ListActions  />} filters={ResourceFilters} >
         <DatagridConfigurable>
-          <ReferenceField source="userId" reference="Users"  />
-<ReferenceField source="cardId" reference="Cards"  />
-<DateField source="recordedDate" /><EditButton />
+          <ReferenceField source="productId" reference="products"  />
+<ReferenceField source="vendorId" reference="vendors"  />
+<NumberField source="quantity" />
+<NumberField source="lowStockThreshold" /><EditButton />
 
         </DatagridConfigurable>
       </List>
@@ -68,9 +69,10 @@ export const InventoryList = () => (
 export const InventoryEdit = () => (
                     <Edit title={<InventoryTitle />}>
                       <SimpleForm>
-                          <ReferenceInput source="userId"  reference="Users"   />
-<ReferenceInput source="cardId"  reference="Cards"   />
-<DateInput source="recordedDate"   />
+                          <ReferenceInput source="productId"  reference="products"   />
+<ReferenceInput source="vendorId"  reference="vendors"   />
+<NumberInput source="quantity"   />
+<NumberInput source="lowStockThreshold"   />
                       </SimpleForm>
                     </Edit>
                   );
@@ -78,17 +80,19 @@ export const InventoryEdit = () => (
 export const InventoryCreate = () => (
                                   <Create>
                                     <SimpleForm>
-                                        <ReferenceInput source="userId"  reference="Users"   />
-<ReferenceInput source="cardId"  reference="Cards"   />
-<DateInput source="recordedDate"   />
+                                        <ReferenceInput source="productId"  reference="products"   />
+<ReferenceInput source="vendorId"  reference="vendors"   />
+<NumberInput source="quantity"   />
+<NumberInput source="lowStockThreshold"   />
                                     </SimpleForm>
                                   </Create>
                                 );
 
 const ResourceFilters = [
       <TextInput source="q" label="Search" alwaysOn />,
-<ReferenceInput source="userId" label="userId" reference="Users"   alwaysOn/>,
-<ReferenceInput source="cardId" label="cardId" reference="Cards"   alwaysOn/>,
+,
+<ReferenceInput source="productId" label="productId" reference="products"   alwaysOn/>,
+<ReferenceInput source="vendorId" label="vendorId" reference="vendors"   alwaysOn/>,
 ,
 
     ];
