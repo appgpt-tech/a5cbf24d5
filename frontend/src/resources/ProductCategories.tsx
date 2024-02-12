@@ -51,7 +51,7 @@ const ListActions = () => (
 );
 const ProductCategoriesTitle = () => {
   const record = useRecordContext();
-  return <span>ProductCategories {record ? `"${ record.id }"` : ""}</span>;
+  return <span>ProductCategories {record ? `"${ record.description }"` : ""}</span>;
 };
 
 export const ProductCategoriesList = () => (
