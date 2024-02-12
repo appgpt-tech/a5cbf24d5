@@ -58,7 +58,7 @@ export const OrdersList = () => (
       <List actions={<ListActions  />} filters={ResourceFilters} >
         <DatagridConfigurable>
           <TextField source="orderNumber" />
-<ReferenceField source="customerId" reference="customers"  />
+<ReferenceField source="customer" reference="Customers"  />
 <NumberField source="totalAmount" />
 <NumberField source="vat" />
 <NumberField source="totalAmountWithVat" />
@@ -78,7 +78,7 @@ export const OrdersEdit = () => (
                     <Edit title={<OrdersTitle />}>
                       <SimpleForm>
                           <TextInput source="orderNumber"   />
-<ReferenceInput source="customerId"  reference="customers"   />
+<ReferenceInput source="customer"  reference="Customers"   />
 <NumberInput source="totalAmount"   />
 <NumberInput source="vat"   />
 <NumberInput source="totalAmountWithVat"   />
@@ -97,7 +97,7 @@ export const OrdersCreate = () => (
                                   <Create>
                                     <SimpleForm>
                                         <TextInput source="orderNumber"   />
-<ReferenceInput source="customerId"  reference="customers"   />
+<ReferenceInput source="customer"  reference="Customers"   />
 <NumberInput source="totalAmount"   />
 <NumberInput source="vat"   />
 <NumberInput source="totalAmountWithVat"   />
@@ -115,7 +115,7 @@ export const OrdersCreate = () => (
 const ResourceFilters = [
       <TextInput source="q" label="Search" alwaysOn />,
 ,
-<ReferenceInput source="customerId" label="customerId" reference="customers"   alwaysOn/>,
+<ReferenceInput source="customer" label="customer" reference="Customers"   alwaysOn/>,
 ,
 ,
 ,
