@@ -8,11 +8,11 @@ import qs from 'qs';
 const fieldConfig = {
     Users: [
   {
-    "field": "email",
+    "field": "userName",
     "datatype": "String"
   },
   {
-    "field": "name",
+    "field": "email",
     "datatype": "String"
   },
   {
@@ -21,10 +21,6 @@ const fieldConfig = {
   }
 ],
 Cards: [
-  {
-    "field": "setname",
-    "datatype": "Integer"
-  },
   {
     "field": "cardName",
     "datatype": "String"
@@ -50,25 +46,25 @@ Cards: [
     "datatype": "String"
   },
   {
+    "field": "setId",
+    "datatype": "Integer"
+  },
+  {
     "field": "id",
     "datatype": "Integer"
   }
 ],
 Sets: [
   {
-    "field": "setId",
-    "datatype": "Integer"
-  },
-  {
-    "field": "setname",
+    "field": "setName",
     "datatype": "String"
   },
   {
-    "field": "releasedate",
+    "field": "releaseDate",
     "datatype": "DateTime"
   },
   {
-    "field": "totalcards",
+    "field": "totalCards",
     "datatype": "Integer"
   },
   {
@@ -78,15 +74,15 @@ Sets: [
 ],
 Inventory: [
   {
-    "field": "userName",
+    "field": "userId",
     "datatype": "Integer"
   },
   {
-    "field": "cardName",
+    "field": "cardId",
     "datatype": "Integer"
   },
   {
-    "field": "recordedDate",
+    "field": "dateAdded",
     "datatype": "DateTime"
   },
   {
@@ -96,15 +92,15 @@ Inventory: [
 ],
 Wishlist: [
   {
-    "field": "userName",
+    "field": "userId",
     "datatype": "Integer"
   },
   {
-    "field": "cardName",
+    "field": "cardId",
     "datatype": "Integer"
   },
   {
-    "field": "insertedDate",
+    "field": "dateInserted",
     "datatype": "DateTime"
   },
   {
