@@ -51,13 +51,13 @@ const ListActions = () => (
 );
 const ProductCategoriesTitle = () => {
   const record = useRecordContext();
-  return <span>ProductCategories {record ? `"${ record.description }"` : ""}</span>;
+  return <span>ProductCategories {record ? `"${ record.category }"` : ""}</span>;
 };
 
 export const ProductCategoriesList = () => (
       <List actions={<ListActions  />} filters={ResourceFilters} >
         <DatagridConfigurable>
-          <TextField source="description" /><EditButton />
+          <TextField source="category" /><EditButton />
 
         </DatagridConfigurable>
       </List>
@@ -66,7 +66,7 @@ export const ProductCategoriesList = () => (
 export const ProductCategoriesEdit = () => (
                     <Edit title={<ProductCategoriesTitle />}>
                       <SimpleForm>
-                          <TextInput source="description"   />
+                          <TextInput source="category"   />
                       </SimpleForm>
                     </Edit>
                   );
@@ -74,7 +74,7 @@ export const ProductCategoriesEdit = () => (
 export const ProductCategoriesCreate = () => (
                                   <Create>
                                     <SimpleForm>
-                                        <TextInput source="description"   />
+                                        <TextInput source="category"   />
                                     </SimpleForm>
                                   </Create>
                                 );
