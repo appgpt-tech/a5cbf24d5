@@ -57,13 +57,13 @@ const CardsTitle = () => {
 export const CardsList = () => (
       <List actions={<ListActions  />} filters={ResourceFilters} >
         <DatagridConfigurable>
-          <ReferenceField source="setname" reference="sets"  />
-<TextField source="cardName" />
+          <TextField source="cardName" />
 <TextField source="serial" />
 <TextField source="type" />
 <TextField source="rarity" />
 <TextField source="condition" />
-<ImageField source="imageUrl" /><EditButton />
+<ImageField source="imageUrl" />
+<ReferenceField source="setId" reference="Sets"  /><EditButton />
 
         </DatagridConfigurable>
       </List>
@@ -72,13 +72,13 @@ export const CardsList = () => (
 export const CardsEdit = () => (
                     <Edit title={<CardsTitle />}>
                       <SimpleForm>
-                          <ReferenceInput source="setname"  reference="sets"   />
-<TextInput source="cardName"   />
+                          <TextInput source="cardName"   />
 <TextInput source="serial"   />
 <TextInput source="type"   />
 <TextInput source="rarity"   />
 <TextInput source="condition"   />
 <ImageInput source="imageUrl"   />
+<ReferenceInput source="setId"  reference="Sets"   />
                       </SimpleForm>
                     </Edit>
                   );
@@ -86,26 +86,26 @@ export const CardsEdit = () => (
 export const CardsCreate = () => (
                                   <Create>
                                     <SimpleForm>
-                                        <ReferenceInput source="setname"  reference="sets"   />
-<TextInput source="cardName"   />
+                                        <TextInput source="cardName"   />
 <TextInput source="serial"   />
 <TextInput source="type"   />
 <TextInput source="rarity"   />
 <TextInput source="condition"   />
 <ImageInput source="imageUrl"   />
+<ReferenceInput source="setId"  reference="Sets"   />
                                     </SimpleForm>
                                   </Create>
                                 );
 
 const ResourceFilters = [
       <TextInput source="q" label="Search" alwaysOn />,
-<ReferenceInput source="setname" label="setname" reference="sets"   alwaysOn/>,
 ,
 ,
 ,
 ,
 ,
 ,
+<ReferenceInput source="setId" label="setId" reference="Sets"   alwaysOn/>,
 
     ];
 
