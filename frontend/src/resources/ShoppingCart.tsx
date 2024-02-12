@@ -51,15 +51,15 @@ const ListActions = () => (
 );
 const ShoppingCartTitle = () => {
   const record = useRecordContext();
-  return <span>ShoppingCart {record ? `"${ record.id }"` : ""}</span>;
+  return <span>ShoppingCart {record ? `"${ record.customerId }"` : ""}</span>;
 };
 
 export const ShoppingCartList = () => (
       <List actions={<ListActions  />} filters={ResourceFilters} >
         <DatagridConfigurable>
-          <ReferenceField source="customer" reference="Customers"  />
-<ReferenceField source="product" reference="Products"  />
-<NumberField source="priceAtPurchase" />
+          <ReferenceField source="customerId" reference="customers"  />
+<ReferenceField source="productId" reference="products"  />
+<NumberField source="price" />
 <NumberField source="quantity" /><EditButton />
 
         </DatagridConfigurable>
@@ -69,9 +69,9 @@ export const ShoppingCartList = () => (
 export const ShoppingCartEdit = () => (
                     <Edit title={<ShoppingCartTitle />}>
                       <SimpleForm>
-                          <ReferenceInput source="customer"  reference="Customers"   />
-<ReferenceInput source="product"  reference="Products"   />
-<NumberInput source="priceAtPurchase"   />
+                          <ReferenceInput source="customerId"  reference="customers"   />
+<ReferenceInput source="productId"  reference="products"   />
+<NumberInput source="price"   />
 <NumberInput source="quantity"   />
                       </SimpleForm>
                     </Edit>
@@ -80,9 +80,9 @@ export const ShoppingCartEdit = () => (
 export const ShoppingCartCreate = () => (
                                   <Create>
                                     <SimpleForm>
-                                        <ReferenceInput source="customer"  reference="Customers"   />
-<ReferenceInput source="product"  reference="Products"   />
-<NumberInput source="priceAtPurchase"   />
+                                        <ReferenceInput source="customerId"  reference="customers"   />
+<ReferenceInput source="productId"  reference="products"   />
+<NumberInput source="price"   />
 <NumberInput source="quantity"   />
                                     </SimpleForm>
                                   </Create>
@@ -90,8 +90,8 @@ export const ShoppingCartCreate = () => (
 
 const ResourceFilters = [
       <TextInput source="q" label="Search" alwaysOn />,
-<ReferenceInput source="customer" label="customer" reference="Customers"   alwaysOn/>,
-<ReferenceInput source="product" label="product" reference="Products"   alwaysOn/>,
+<ReferenceInput source="customerId" label="customerId" reference="customers"   alwaysOn/>,
+<ReferenceInput source="productId" label="productId" reference="products"   alwaysOn/>,
 ,
 ,
 
