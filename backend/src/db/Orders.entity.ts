@@ -6,8 +6,11 @@ export class OrdersEntity {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column("integer",{nullable: true})
-customerId: number;
+  @Column("text",{nullable: true})
+orderNumber: string;
+
+@Column("integer",{nullable: true})
+customer: number;
 
 @Column("real",{nullable: true})
 totalAmount: number;
