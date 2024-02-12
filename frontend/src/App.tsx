@@ -83,7 +83,7 @@ const App = () => (
 list={UsersList}
 create={UsersCreate}
 edit={UsersEdit}
-recordRepresentation="email"
+recordRepresentation="userName"
 icon={UsersIcon}/>
 <Resource name="Cards" options={{label:"Cards"}} 
 list={CardsList}
@@ -95,19 +95,19 @@ icon={CardsIcon}/>
 list={SetsList}
 create={SetsCreate}
 edit={SetsEdit}
-recordRepresentation="setId"
+recordRepresentation="setName"
 icon={SetsIcon}/>
 <Resource name="Inventory" options={{label:"Inventory"}} 
 list={InventoryList}
 create={InventoryCreate}
 edit={InventoryEdit}
-recordRepresentation="recordedDate"
+recordRepresentation="userId"
 icon={InventoryIcon}/>
 <Resource name="Wishlist" options={{label:"Wishlist"}} 
 list={WishlistList}
 create={WishlistCreate}
 edit={WishlistEdit}
-recordRepresentation="insertedDate"
+recordRepresentation="userId"
 icon={WishlistIcon}/>
     <CustomRoutes noLayout>
       {/*This renders the login UI on the /auth route*/}
