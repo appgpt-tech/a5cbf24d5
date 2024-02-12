@@ -8,10 +8,6 @@ import qs from 'qs';
 const fieldConfig = {
     Users: [
   {
-    "field": "userId",
-    "datatype": "Integer"
-  },
-  {
     "field": "email",
     "datatype": "String"
   },
@@ -26,11 +22,7 @@ const fieldConfig = {
 ],
 Cards: [
   {
-    "field": "cardId",
-    "datatype": "Integer"
-  },
-  {
-    "field": "setId",
+    "field": "setname",
     "datatype": "Integer"
   },
   {
@@ -68,15 +60,15 @@ Sets: [
     "datatype": "Integer"
   },
   {
-    "field": "setName",
+    "field": "setname",
     "datatype": "String"
   },
   {
-    "field": "releaseDate",
+    "field": "releasedate",
     "datatype": "DateTime"
   },
   {
-    "field": "totalCards",
+    "field": "totalcards",
     "datatype": "Integer"
   },
   {
@@ -86,11 +78,11 @@ Sets: [
 ],
 Inventory: [
   {
-    "field": "userId",
+    "field": "userName",
     "datatype": "Integer"
   },
   {
-    "field": "cardId",
+    "field": "cardName",
     "datatype": "Integer"
   },
   {
@@ -104,11 +96,11 @@ Inventory: [
 ],
 Wishlist: [
   {
-    "field": "userId",
+    "field": "userName",
     "datatype": "Integer"
   },
   {
-    "field": "cardId",
+    "field": "cardName",
     "datatype": "Integer"
   },
   {
