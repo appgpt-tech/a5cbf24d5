@@ -8,19 +8,15 @@ import qs from 'qs';
 const fieldConfig = {
     Users: [
   {
-    "field": "username",
-    "datatype": "String"
+    "field": "userId",
+    "datatype": "Integer"
   },
   {
     "field": "email",
     "datatype": "String"
   },
   {
-    "field": "password",
-    "datatype": "String"
-  },
-  {
-    "field": "role",
+    "field": "name",
     "datatype": "String"
   },
   {
@@ -28,21 +24,37 @@ const fieldConfig = {
     "datatype": "Integer"
   }
 ],
-Vendors: [
+Cards: [
   {
-    "field": "companyName",
+    "field": "cardId",
+    "datatype": "Integer"
+  },
+  {
+    "field": "setId",
+    "datatype": "Integer"
+  },
+  {
+    "field": "cardName",
     "datatype": "String"
   },
   {
-    "field": "contactName",
+    "field": "serial",
     "datatype": "String"
   },
   {
-    "field": "email",
+    "field": "type",
     "datatype": "String"
   },
   {
-    "field": "password",
+    "field": "rarity",
+    "datatype": "String"
+  },
+  {
+    "field": "condition",
+    "datatype": "String"
+  },
+  {
+    "field": "imageUrl",
     "datatype": "String"
   },
   {
@@ -50,34 +62,22 @@ Vendors: [
     "datatype": "Integer"
   }
 ],
-Customers: [
+Sets: [
   {
-    "field": "customerName",
+    "field": "setId",
+    "datatype": "Integer"
+  },
+  {
+    "field": "setName",
     "datatype": "String"
   },
   {
-    "field": "email",
-    "datatype": "String"
+    "field": "releaseDate",
+    "datatype": "DateTime"
   },
   {
-    "field": "password",
-    "datatype": "String"
-  },
-  {
-    "field": "billingAddress",
-    "datatype": "String"
-  },
-  {
-    "field": "shippingAddress",
-    "datatype": "String"
-  },
-  {
-    "field": "country",
-    "datatype": "String"
-  },
-  {
-    "field": "phone",
-    "datatype": "String"
+    "field": "totalCards",
+    "datatype": "Integer"
   },
   {
     "field": "id",
@@ -86,251 +86,15 @@ Customers: [
 ],
 Inventory: [
   {
-    "field": "productId",
+    "field": "userId",
     "datatype": "Integer"
   },
   {
-    "field": "quantity",
+    "field": "cardId",
     "datatype": "Integer"
   },
   {
-    "field": "lowStockThreshold",
-    "datatype": "Integer"
-  },
-  {
-    "field": "id",
-    "datatype": "Integer"
-  }
-],
-Products: [
-  {
-    "field": "productName",
-    "datatype": "String"
-  },
-  {
-    "field": "vendorId",
-    "datatype": "Integer"
-  },
-  {
-    "field": "price",
-    "datatype": "Real"
-  },
-  {
-    "field": "weight",
-    "datatype": "Real"
-  },
-  {
-    "field": "description",
-    "datatype": "String"
-  },
-  {
-    "field": "thumbnail",
-    "datatype": "String"
-  },
-  {
-    "field": "image",
-    "datatype": "String"
-  },
-  {
-    "field": "category",
-    "datatype": "Integer"
-  },
-  {
-    "field": "creationDate",
-    "datatype": "DateTime"
-  },
-  {
-    "field": "stock",
-    "datatype": "Integer"
-  },
-  {
-    "field": "id",
-    "datatype": "Integer"
-  }
-],
-ProductCategories: [
-  {
-    "field": "description",
-    "datatype": "String"
-  },
-  {
-    "field": "id",
-    "datatype": "Integer"
-  }
-],
-Discounts: [
-  {
-    "field": "productId",
-    "datatype": "Integer"
-  },
-  {
-    "field": "discountType",
-    "datatype": "String"
-  },
-  {
-    "field": "description",
-    "datatype": "String"
-  },
-  {
-    "field": "discountAmount",
-    "datatype": "Real"
-  },
-  {
-    "field": "discountPercent",
-    "datatype": "Real"
-  },
-  {
-    "field": "id",
-    "datatype": "Integer"
-  }
-],
-ShoppingCart: [
-  {
-    "field": "customerId",
-    "datatype": "Integer"
-  },
-  {
-    "field": "productId",
-    "datatype": "Integer"
-  },
-  {
-    "field": "price",
-    "datatype": "Real"
-  },
-  {
-    "field": "quantity",
-    "datatype": "Integer"
-  },
-  {
-    "field": "id",
-    "datatype": "Integer"
-  }
-],
-Orders: [
-  {
-    "field": "orderNumber",
-    "datatype": "String"
-  },
-  {
-    "field": "customerId",
-    "datatype": "Integer"
-  },
-  {
-    "field": "totalAmount",
-    "datatype": "Real"
-  },
-  {
-    "field": "vat",
-    "datatype": "Real"
-  },
-  {
-    "field": "totalAmountWithVat",
-    "datatype": "Real"
-  },
-  {
-    "field": "shippingCost",
-    "datatype": "Real"
-  },
-  {
-    "field": "shippingAddress",
-    "datatype": "String"
-  },
-  {
-    "field": "orderAddress",
-    "datatype": "String"
-  },
-  {
-    "field": "orderEmail",
-    "datatype": "String"
-  },
-  {
-    "field": "orderDate",
-    "datatype": "DateTime"
-  },
-  {
-    "field": "orderStatus",
-    "datatype": "String"
-  },
-  {
-    "field": "trackingNo",
-    "datatype": "String"
-  },
-  {
-    "field": "id",
-    "datatype": "Integer"
-  }
-],
-OrderDetails: [
-  {
-    "field": "orderId",
-    "datatype": "Integer"
-  },
-  {
-    "field": "productId",
-    "datatype": "Integer"
-  },
-  {
-    "field": "price",
-    "datatype": "Real"
-  },
-  {
-    "field": "quantity",
-    "datatype": "Integer"
-  },
-  {
-    "field": "id",
-    "datatype": "Integer"
-  }
-],
-Payments: [
-  {
-    "field": "orderId",
-    "datatype": "Integer"
-  },
-  {
-    "field": "amount",
-    "datatype": "Real"
-  },
-  {
-    "field": "paymentMethod",
-    "datatype": "String"
-  },
-  {
-    "field": "paymentDate",
-    "datatype": "DateTime"
-  },
-  {
-    "field": "paymentStatus",
-    "datatype": "String"
-  },
-  {
-    "field": "id",
-    "datatype": "Integer"
-  }
-],
-Reviews: [
-  {
-    "field": "productId",
-    "datatype": "Integer"
-  },
-  {
-    "field": "customerId",
-    "datatype": "Integer"
-  },
-  {
-    "field": "vendorId",
-    "datatype": "Integer"
-  },
-  {
-    "field": "rating",
-    "datatype": "Real"
-  },
-  {
-    "field": "reviewDetails",
-    "datatype": "String"
-  },
-  {
-    "field": "date",
+    "field": "recordedDate",
     "datatype": "DateTime"
   },
   {
@@ -338,29 +102,17 @@ Reviews: [
     "datatype": "Integer"
   }
 ],
-SupportTickets: [
+Wishlist: [
   {
     "field": "userId",
     "datatype": "Integer"
   },
   {
-    "field": "customerId",
+    "field": "cardId",
     "datatype": "Integer"
   },
   {
-    "field": "description",
-    "datatype": "String"
-  },
-  {
-    "field": "status",
-    "datatype": "String"
-  },
-  {
-    "field": "creationDate",
-    "datatype": "DateTime"
-  },
-  {
-    "field": "resolutionDate",
+    "field": "insertedDate",
     "datatype": "DateTime"
   },
   {
