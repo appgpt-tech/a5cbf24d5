@@ -10,7 +10,7 @@ export class OrdersEntity {
 orderNumber: string;
 
 @Column("integer",{nullable: true})
-customerId: number;
+customer: number;
 
 @Column("real",{nullable: true})
 totalAmount: number;
