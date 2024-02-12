@@ -7,13 +7,13 @@ export class ShoppingCartEntity {
   id: number;
 
   @Column("integer",{nullable: true})
-customer: number;
+customerId: number;
 
 @Column("integer",{nullable: true})
-product: number;
+productId: number;
 
 @Column("real",{nullable: true})
-priceAtPurchase: number;
+price: number;
 
 @Column("integer",{nullable: true})
 quantity: number;
