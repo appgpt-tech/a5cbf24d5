@@ -57,9 +57,9 @@ const CustomersTitle = () => {
 export const CustomersList = () => (
       <List actions={<ListActions  />} filters={ResourceFilters} >
         <DatagridConfigurable>
-          <EmailField source="email" />
+          <TextField source="customerName" />
+<EmailField source="email" />
 <ReadOnlyPasswordField source="password" />
-<TextField source="name" />
 <TextField source="billingAddress" />
 <TextField source="shippingAddress" />
 <TextField source="country" />
@@ -72,9 +72,9 @@ export const CustomersList = () => (
 export const CustomersEdit = () => (
                     <Edit title={<CustomersTitle />}>
                       <SimpleForm>
-                          <TextInput source="email"   />
+                          <TextInput source="customerName"   />
+<TextInput source="email"   />
 <PasswordInput source="password"   />
-<TextInput source="name"   />
 <TextInput source="billingAddress"   />
 <TextInput source="shippingAddress"   />
 <TextInput source="country"   />
@@ -86,9 +86,9 @@ export const CustomersEdit = () => (
 export const CustomersCreate = () => (
                                   <Create>
                                     <SimpleForm>
-                                        <TextInput source="email"   />
+                                        <TextInput source="customerName"   />
+<TextInput source="email"   />
 <PasswordInput source="password"   />
-<TextInput source="name"   />
 <TextInput source="billingAddress"   />
 <TextInput source="shippingAddress"   />
 <TextInput source="country"   />
