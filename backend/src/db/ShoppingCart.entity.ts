@@ -7,10 +7,10 @@ export class ShoppingCartEntity {
   id: number;
 
   @Column("integer",{nullable: true})
-customerId: number;
+customer: number;
 
 @Column("integer",{nullable: true})
-productId: number;
+product: number;
 
 @Column("real",{nullable: true})
 priceAtPurchase: number;
