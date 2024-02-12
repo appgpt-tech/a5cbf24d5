@@ -6,11 +6,11 @@ export class ProductsEntity {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column("integer",{nullable: true})
-vendorId: number;
-
-@Column("text",{nullable: true})
+  @Column("text",{nullable: true})
 productName: string;
+
+@Column("integer",{nullable: true})
+vendor: number;
 
 @Column("real",{nullable: true})
 price: number;
