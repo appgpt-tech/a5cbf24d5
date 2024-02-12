@@ -10,7 +10,7 @@ export class ProductsEntity {
 productName: string;
 
 @Column("integer",{nullable: true})
-vendor: number;
+vendorId: number;
 
 @Column("real",{nullable: true})
 price: number;
