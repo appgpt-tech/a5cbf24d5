@@ -7,7 +7,7 @@ export class ProductCategoriesEntity {
   id: number;
 
   @Column("text",{nullable: true})
-description: string;
+category: string;
 
 
 }
