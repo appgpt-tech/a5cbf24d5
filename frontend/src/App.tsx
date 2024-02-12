@@ -30,7 +30,7 @@ import ProductCategoriesIcon from "@mui/icons-material/Category";
 import DiscountsIcon from "@mui/icons-material/LocalOffer";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import OrdersIcon from "@mui/icons-material/Receipt";
-import OrderDetailsIcon from "@mui/icons-material/Receipt";
+import OrderDetailsIcon from "@mui/icons-material/List";
 import PaymentsIcon from "@mui/icons-material/Payment";
 import ReviewsIcon from "@mui/icons-material/RateReview";
 import SupportTicketsIcon from "@mui/icons-material/Support"; 
