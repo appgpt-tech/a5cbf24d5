@@ -86,7 +86,7 @@ Customers: [
 ],
 Inventory: [
   {
-    "field": "product",
+    "field": "productId",
     "datatype": "Integer"
   },
   {
@@ -108,7 +108,7 @@ Products: [
     "datatype": "String"
   },
   {
-    "field": "vendor",
+    "field": "vendorId",
     "datatype": "Integer"
   },
   {
@@ -160,7 +160,7 @@ ProductCategories: [
 ],
 Discounts: [
   {
-    "field": "product",
+    "field": "productId",
     "datatype": "Integer"
   },
   {
@@ -186,15 +186,15 @@ Discounts: [
 ],
 ShoppingCart: [
   {
-    "field": "customer",
+    "field": "customerId",
     "datatype": "Integer"
   },
   {
-    "field": "product",
+    "field": "productId",
     "datatype": "Integer"
   },
   {
-    "field": "priceAtPurchase",
+    "field": "price",
     "datatype": "Real"
   },
   {
@@ -212,7 +212,7 @@ Orders: [
     "datatype": "String"
   },
   {
-    "field": "customer",
+    "field": "customerId",
     "datatype": "Integer"
   },
   {
@@ -262,15 +262,11 @@ Orders: [
 ],
 OrderDetails: [
   {
-    "field": "orderNumber",
+    "field": "orderId",
     "datatype": "Integer"
   },
   {
-    "field": "line",
-    "datatype": "Integer"
-  },
-  {
-    "field": "product",
+    "field": "productId",
     "datatype": "Integer"
   },
   {
@@ -288,7 +284,7 @@ OrderDetails: [
 ],
 Payments: [
   {
-    "field": "orderNumber",
+    "field": "orderId",
     "datatype": "Integer"
   },
   {
@@ -314,20 +310,20 @@ Payments: [
 ],
 Reviews: [
   {
-    "field": "product",
+    "field": "productId",
     "datatype": "Integer"
   },
   {
-    "field": "customer",
+    "field": "customerId",
     "datatype": "Integer"
   },
   {
-    "field": "vendor",
+    "field": "vendorId",
     "datatype": "Integer"
   },
   {
     "field": "rating",
-    "datatype": "Integer"
+    "datatype": "Real"
   },
   {
     "field": "reviewDetails",
@@ -344,11 +340,11 @@ Reviews: [
 ],
 SupportTickets: [
   {
-    "field": "user",
+    "field": "userId",
     "datatype": "Integer"
   },
   {
-    "field": "customer",
+    "field": "customerId",
     "datatype": "Integer"
   },
   {
