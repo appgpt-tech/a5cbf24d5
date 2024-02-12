@@ -7,15 +7,15 @@ export class ReviewsEntity {
   id: number;
 
   @Column("integer",{nullable: true})
-product: number;
+productId: number;
 
 @Column("integer",{nullable: true})
-customer: number;
+customerId: number;
 
 @Column("integer",{nullable: true})
-vendor: number;
+vendorId: number;
 
-@Column("integer",{nullable: true})
+@Column("real",{nullable: true})
 rating: number;
 
 @Column("text",{nullable: true})
