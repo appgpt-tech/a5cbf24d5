@@ -51,15 +51,15 @@ const ListActions = () => (
 );
 const WishlistTitle = () => {
   const record = useRecordContext();
-  return <span>Wishlist {record ? `"${ record.insertedDate }"` : ""}</span>;
+  return <span>Wishlist {record ? `"${ record.userId }"` : ""}</span>;
 };
 
 export const WishlistList = () => (
       <List actions={<ListActions  />} filters={ResourceFilters} >
         <DatagridConfigurable>
-          <ReferenceField source="userName" reference="users"  />
-<ReferenceField source="cardName" reference="cards"  />
-<DateField source="insertedDate" /><EditButton />
+          <ReferenceField source="userId" reference="Users"  />
+<ReferenceField source="cardId" reference="Cards"  />
+<DateField source="dateInserted" /><EditButton />
 
         </DatagridConfigurable>
       </List>
@@ -68,9 +68,9 @@ export const WishlistList = () => (
 export const WishlistEdit = () => (
                     <Edit title={<WishlistTitle />}>
                       <SimpleForm>
-                          <ReferenceInput source="userName"  reference="users"   />
-<ReferenceInput source="cardName"  reference="cards"   />
-<DateInput source="insertedDate"   />
+                          <ReferenceInput source="userId"  reference="Users"   />
+<ReferenceInput source="cardId"  reference="Cards"   />
+<DateInput source="dateInserted"   />
                       </SimpleForm>
                     </Edit>
                   );
@@ -78,17 +78,17 @@ export const WishlistEdit = () => (
 export const WishlistCreate = () => (
                                   <Create>
                                     <SimpleForm>
-                                        <ReferenceInput source="userName"  reference="users"   />
-<ReferenceInput source="cardName"  reference="cards"   />
-<DateInput source="insertedDate"   />
+                                        <ReferenceInput source="userId"  reference="Users"   />
+<ReferenceInput source="cardId"  reference="Cards"   />
+<DateInput source="dateInserted"   />
                                     </SimpleForm>
                                   </Create>
                                 );
 
 const ResourceFilters = [
       <TextInput source="q" label="Search" alwaysOn />,
-<ReferenceInput source="userName" label="userName" reference="users"   alwaysOn/>,
-<ReferenceInput source="cardName" label="cardName" reference="cards"   alwaysOn/>,
+<ReferenceInput source="userId" label="userId" reference="Users"   alwaysOn/>,
+<ReferenceInput source="cardId" label="cardId" reference="Cards"   alwaysOn/>,
 ,
 
     ];
