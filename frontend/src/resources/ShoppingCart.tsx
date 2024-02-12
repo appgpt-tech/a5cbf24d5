@@ -57,8 +57,8 @@ const ShoppingCartTitle = () => {
 export const ShoppingCartList = () => (
       <List actions={<ListActions  />} filters={ResourceFilters} >
         <DatagridConfigurable>
-          <ReferenceField source="customerId" reference="customers"  />
-<ReferenceField source="productId" reference="products"  />
+          <ReferenceField source="customer" reference="Customers"  />
+<ReferenceField source="product" reference="Products"  />
 <NumberField source="priceAtPurchase" />
 <NumberField source="quantity" /><EditButton />
 
@@ -69,8 +69,8 @@ export const ShoppingCartList = () => (
 export const ShoppingCartEdit = () => (
                     <Edit title={<ShoppingCartTitle />}>
                       <SimpleForm>
-                          <ReferenceInput source="customerId"  reference="customers"   />
-<ReferenceInput source="productId"  reference="products"   />
+                          <ReferenceInput source="customer"  reference="Customers"   />
+<ReferenceInput source="product"  reference="Products"   />
 <NumberInput source="priceAtPurchase"   />
 <NumberInput source="quantity"   />
                       </SimpleForm>
@@ -80,8 +80,8 @@ export const ShoppingCartEdit = () => (
 export const ShoppingCartCreate = () => (
                                   <Create>
                                     <SimpleForm>
-                                        <ReferenceInput source="customerId"  reference="customers"   />
-<ReferenceInput source="productId"  reference="products"   />
+                                        <ReferenceInput source="customer"  reference="Customers"   />
+<ReferenceInput source="product"  reference="Products"   />
 <NumberInput source="priceAtPurchase"   />
 <NumberInput source="quantity"   />
                                     </SimpleForm>
@@ -90,9 +90,9 @@ export const ShoppingCartCreate = () => (
 
 const ResourceFilters = [
       <TextInput source="q" label="Search" alwaysOn />,
+<ReferenceInput source="customer" label="customer" reference="Customers"   alwaysOn/>,
+<ReferenceInput source="product" label="product" reference="Products"   alwaysOn/>,
 ,
-<ReferenceInput source="customerId" label="customerId" reference="customers"   alwaysOn/>,
-<ReferenceInput source="productId" label="productId" reference="products"   alwaysOn/>,
 ,
 
     ];
