@@ -7,10 +7,10 @@ export class SupportTicketsEntity {
   id: number;
 
   @Column("integer",{nullable: true})
-userId: number;
+user: number;
 
 @Column("integer",{nullable: true})
-customerId: number;
+customer: number;
 
 @Column("text",{nullable: true})
 description: string;
