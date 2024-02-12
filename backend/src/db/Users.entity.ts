@@ -7,7 +7,7 @@ export class UsersEntity {
   id: number;
 
   @Column("text",{nullable: true})
-name: string;
+username: string;
 
 @Column("text",{nullable: true})
 email: string;
