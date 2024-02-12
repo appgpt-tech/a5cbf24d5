@@ -8,11 +8,7 @@ import qs from 'qs';
 const fieldConfig = {
     Users: [
   {
-    "field": "id",
-    "datatype": "Integer"
-  },
-  {
-    "field": "name",
+    "field": "username",
     "datatype": "String"
   },
   {
@@ -26,13 +22,13 @@ const fieldConfig = {
   {
     "field": "role",
     "datatype": "String"
-  }
-],
-Vendors: [
+  },
   {
     "field": "id",
     "datatype": "Integer"
-  },
+  }
+],
+Vendors: [
   {
     "field": "companyName",
     "datatype": "String"
@@ -48,12 +44,16 @@ Vendors: [
   {
     "field": "password",
     "datatype": "String"
+  },
+  {
+    "field": "id",
+    "datatype": "Integer"
   }
 ],
 Customers: [
   {
-    "field": "id",
-    "datatype": "Integer"
+    "field": "customerName",
+    "datatype": "String"
   },
   {
     "field": "email",
@@ -61,10 +61,6 @@ Customers: [
   },
   {
     "field": "password",
-    "datatype": "String"
-  },
-  {
-    "field": "name",
     "datatype": "String"
   },
   {
@@ -82,19 +78,15 @@ Customers: [
   {
     "field": "phone",
     "datatype": "String"
+  },
+  {
+    "field": "id",
+    "datatype": "Integer"
   }
 ],
 Inventory: [
   {
-    "field": "id",
-    "datatype": "Integer"
-  },
-  {
-    "field": "productId",
-    "datatype": "Integer"
-  },
-  {
-    "field": "vendorId",
+    "field": "product",
     "datatype": "Integer"
   },
   {
@@ -104,20 +96,20 @@ Inventory: [
   {
     "field": "lowStockThreshold",
     "datatype": "Integer"
+  },
+  {
+    "field": "id",
+    "datatype": "Integer"
   }
 ],
 Products: [
   {
-    "field": "id",
-    "datatype": "Integer"
-  },
-  {
-    "field": "vendorId",
-    "datatype": "Integer"
-  },
-  {
     "field": "productName",
     "datatype": "String"
+  },
+  {
+    "field": "vendor",
+    "datatype": "Integer"
   },
   {
     "field": "price",
@@ -150,25 +142,25 @@ Products: [
   {
     "field": "stock",
     "datatype": "Integer"
+  },
+  {
+    "field": "id",
+    "datatype": "Integer"
   }
 ],
 ProductCategories: [
   {
-    "field": "id",
-    "datatype": "Integer"
-  },
-  {
     "field": "description",
     "datatype": "String"
+  },
+  {
+    "field": "id",
+    "datatype": "Integer"
   }
 ],
 Discounts: [
   {
-    "field": "id",
-    "datatype": "Integer"
-  },
-  {
-    "field": "productId",
+    "field": "product",
     "datatype": "Integer"
   },
   {
@@ -186,19 +178,19 @@ Discounts: [
   {
     "field": "discountPercent",
     "datatype": "Real"
+  },
+  {
+    "field": "id",
+    "datatype": "Integer"
   }
 ],
 ShoppingCart: [
   {
-    "field": "id",
+    "field": "customer",
     "datatype": "Integer"
   },
   {
-    "field": "customerId",
-    "datatype": "Integer"
-  },
-  {
-    "field": "productId",
+    "field": "product",
     "datatype": "Integer"
   },
   {
@@ -208,15 +200,19 @@ ShoppingCart: [
   {
     "field": "quantity",
     "datatype": "Integer"
+  },
+  {
+    "field": "id",
+    "datatype": "Integer"
   }
 ],
 Orders: [
   {
-    "field": "id",
-    "datatype": "Integer"
+    "field": "orderNumber",
+    "datatype": "String"
   },
   {
-    "field": "customerId",
+    "field": "customer",
     "datatype": "Integer"
   },
   {
@@ -258,19 +254,23 @@ Orders: [
   {
     "field": "trackingNo",
     "datatype": "String"
+  },
+  {
+    "field": "id",
+    "datatype": "Integer"
   }
 ],
 OrderDetails: [
   {
-    "field": "id",
+    "field": "orderNumber",
     "datatype": "Integer"
   },
   {
-    "field": "orderId",
+    "field": "line",
     "datatype": "Integer"
   },
   {
-    "field": "productId",
+    "field": "product",
     "datatype": "Integer"
   },
   {
@@ -280,15 +280,15 @@ OrderDetails: [
   {
     "field": "quantity",
     "datatype": "Integer"
+  },
+  {
+    "field": "id",
+    "datatype": "Integer"
   }
 ],
 Payments: [
   {
-    "field": "id",
-    "datatype": "Integer"
-  },
-  {
-    "field": "orderId",
+    "field": "orderNumber",
     "datatype": "Integer"
   },
   {
@@ -306,28 +306,28 @@ Payments: [
   {
     "field": "paymentStatus",
     "datatype": "String"
+  },
+  {
+    "field": "id",
+    "datatype": "Integer"
   }
 ],
 Reviews: [
   {
-    "field": "id",
+    "field": "product",
     "datatype": "Integer"
   },
   {
-    "field": "productId",
+    "field": "customer",
     "datatype": "Integer"
   },
   {
-    "field": "customerId",
-    "datatype": "Integer"
-  },
-  {
-    "field": "vendorId",
+    "field": "vendor",
     "datatype": "Integer"
   },
   {
     "field": "rating",
-    "datatype": "Real"
+    "datatype": "Integer"
   },
   {
     "field": "reviewDetails",
@@ -336,19 +336,19 @@ Reviews: [
   {
     "field": "date",
     "datatype": "DateTime"
+  },
+  {
+    "field": "id",
+    "datatype": "Integer"
   }
 ],
 SupportTickets: [
   {
-    "field": "id",
+    "field": "user",
     "datatype": "Integer"
   },
   {
-    "field": "userId",
-    "datatype": "Integer"
-  },
-  {
-    "field": "customerId",
+    "field": "customer",
     "datatype": "Integer"
   },
   {
@@ -366,6 +366,10 @@ SupportTickets: [
   {
     "field": "resolutionDate",
     "datatype": "DateTime"
+  },
+  {
+    "field": "id",
+    "datatype": "Integer"
   }
 ]
 };
