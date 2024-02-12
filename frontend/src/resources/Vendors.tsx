@@ -51,7 +51,7 @@ const ListActions = () => (
 );
 const VendorsTitle = () => {
   const record = useRecordContext();
-  return <span>Vendors {record ? `"${ record.id }"` : ""}</span>;
+  return <span>Vendors {record ? `"${ record.companyName }"` : ""}</span>;
 };
 
 export const VendorsList = () => (
