@@ -7,13 +7,10 @@ export class OrderDetailsEntity {
   id: number;
 
   @Column("integer",{nullable: true})
-orderNumber: number;
+orderId: number;
 
 @Column("integer",{nullable: true})
-line: number;
-
-@Column("integer",{nullable: true})
-product: number;
+productId: number;
 
 @Column("real",{nullable: true})
 price: number;
