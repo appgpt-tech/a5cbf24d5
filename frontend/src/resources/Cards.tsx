@@ -51,14 +51,13 @@ const ListActions = () => (
 );
 const CardsTitle = () => {
   const record = useRecordContext();
-  return <span>Cards {record ? `"${ record.cardId }"` : ""}</span>;
+  return <span>Cards {record ? `"${ record.cardName }"` : ""}</span>;
 };
 
 export const CardsList = () => (
       <List actions={<ListActions  />} filters={ResourceFilters} >
         <DatagridConfigurable>
-          <NumberField source="cardId" />
-<ReferenceField source="setId" reference="Sets"  />
+          <ReferenceField source="setname" reference="sets"  />
 <TextField source="cardName" />
 <TextField source="serial" />
 <TextField source="type" />
@@ -73,8 +72,7 @@ export const CardsList = () => (
 export const CardsEdit = () => (
                     <Edit title={<CardsTitle />}>
                       <SimpleForm>
-                          <NumberInput source="cardId"   />
-<ReferenceInput source="setId"  reference="Sets"   />
+                          <ReferenceInput source="setname"  reference="sets"   />
 <TextInput source="cardName"   />
 <TextInput source="serial"   />
 <TextInput source="type"   />
@@ -88,8 +86,7 @@ export const CardsEdit = () => (
 export const CardsCreate = () => (
                                   <Create>
                                     <SimpleForm>
-                                        <NumberInput source="cardId"   />
-<ReferenceInput source="setId"  reference="Sets"   />
+                                        <ReferenceInput source="setname"  reference="sets"   />
 <TextInput source="cardName"   />
 <TextInput source="serial"   />
 <TextInput source="type"   />
@@ -102,8 +99,7 @@ export const CardsCreate = () => (
 
 const ResourceFilters = [
       <TextInput source="q" label="Search" alwaysOn />,
-,
-<ReferenceInput source="setId" label="setId" reference="Sets"   alwaysOn/>,
+<ReferenceInput source="setname" label="setname" reference="sets"   alwaysOn/>,
 ,
 ,
 ,
