@@ -51,14 +51,14 @@ const ListActions = () => (
 );
 const WishlistTitle = () => {
   const record = useRecordContext();
-  return <span>Wishlist {record ? `"${ record.userId }"` : ""}</span>;
+  return <span>Wishlist {record ? `"${ record.user }"` : ""}</span>;
 };
 
 export const WishlistList = () => (
       <List actions={<ListActions  />} filters={ResourceFilters} >
         <DatagridConfigurable>
-          <ReferenceField source="userId" reference="Users"  />
-<ReferenceField source="cardId" reference="Cards"  />
+          <ReferenceField source="user" reference="Users"  />
+<ReferenceField source="card" reference="Cards"  />
 <DateField source="dateInserted" /><EditButton />
 
         </DatagridConfigurable>
@@ -68,8 +68,8 @@ export const WishlistList = () => (
 export const WishlistEdit = () => (
                     <Edit title={<WishlistTitle />}>
                       <SimpleForm>
-                          <ReferenceInput source="userId"  reference="Users"   />
-<ReferenceInput source="cardId"  reference="Cards"   />
+                          <ReferenceInput source="user"  reference="Users"   />
+<ReferenceInput source="card"  reference="Cards"   />
 <DateInput source="dateInserted"   />
                       </SimpleForm>
                     </Edit>
@@ -78,8 +78,8 @@ export const WishlistEdit = () => (
 export const WishlistCreate = () => (
                                   <Create>
                                     <SimpleForm>
-                                        <ReferenceInput source="userId"  reference="Users"   />
-<ReferenceInput source="cardId"  reference="Cards"   />
+                                        <ReferenceInput source="user"  reference="Users"   />
+<ReferenceInput source="card"  reference="Cards"   />
 <DateInput source="dateInserted"   />
                                     </SimpleForm>
                                   </Create>
@@ -87,8 +87,8 @@ export const WishlistCreate = () => (
 
 const ResourceFilters = [
       <TextInput source="q" label="Search" alwaysOn />,
-<ReferenceInput source="userId" label="userId" reference="Users"   alwaysOn/>,
-<ReferenceInput source="cardId" label="cardId" reference="Cards"   alwaysOn/>,
+<ReferenceInput source="user" label="user" reference="Users"   alwaysOn/>,
+<ReferenceInput source="card" label="card" reference="Cards"   alwaysOn/>,
 ,
 
     ];
