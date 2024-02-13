@@ -25,7 +25,7 @@ condition: string;
 imageUrl: string;
 
 @Column("integer",{nullable: true})
-setId: number;
+set: number;
 
 
 }
