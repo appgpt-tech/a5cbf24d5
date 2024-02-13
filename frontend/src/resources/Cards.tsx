@@ -63,7 +63,7 @@ export const CardsList = () => (
 <TextField source="rarity" />
 <TextField source="condition" />
 <ImageField source="imageUrl" />
-<ReferenceField source="setId" reference="Sets"  /><EditButton />
+<ReferenceField source="set" reference="Sets"  /><EditButton />
 
         </DatagridConfigurable>
       </List>
@@ -78,7 +78,7 @@ export const CardsEdit = () => (
 <TextInput source="rarity"   />
 <TextInput source="condition"   />
 <ImageInput source="imageUrl"   />
-<ReferenceInput source="setId"  reference="Sets"   />
+<ReferenceInput source="set"  reference="Sets"   />
                       </SimpleForm>
                     </Edit>
                   );
@@ -92,7 +92,7 @@ export const CardsCreate = () => (
 <TextInput source="rarity"   />
 <TextInput source="condition"   />
 <ImageInput source="imageUrl"   />
-<ReferenceInput source="setId"  reference="Sets"   />
+<ReferenceInput source="set"  reference="Sets"   />
                                     </SimpleForm>
                                   </Create>
                                 );
@@ -105,7 +105,7 @@ const ResourceFilters = [
 ,
 ,
 ,
-<ReferenceInput source="setId" label="setId" reference="Sets"   alwaysOn/>,
+<ReferenceInput source="set" label="set" reference="Sets"   alwaysOn/>,
 
     ];
 
