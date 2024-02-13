@@ -32,6 +32,7 @@ import {
   PasswordInput
 } from "react-admin";
 import { useRecordContext } from "react-admin";
+import { Grid } from '@mui/material';
 const ReadOnlyPasswordField = ({ record, source }) => {
 
   // You can customize the way you display the password here, e.g., mask it with asterisks
@@ -67,8 +68,12 @@ export const UsersList = () => (
 export const UsersEdit = () => (
                     <Edit title={<UsersTitle />}>
                       <SimpleForm>
-                          <TextInput source="userName"   />
-<TextInput source="email"   />
+                        <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 5 }}>
+                          <Grid item xs={4}>
+<TextInput source="userName"   /></Grid>
+<Grid item xs={4}>
+<TextInput source="email"   /></Grid>
+                        </Grid>
                       </SimpleForm>
                     </Edit>
                   );
@@ -76,8 +81,12 @@ export const UsersEdit = () => (
 export const UsersCreate = () => (
                                   <Create>
                                     <SimpleForm>
-                                        <TextInput source="userName"   />
-<TextInput source="email"   />
+                                      <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 5 }}>
+                                        <Grid item xs={4}>
+<TextInput source="userName"   /></Grid>
+<Grid item xs={4}>
+<TextInput source="email"   /></Grid>
+                                      </Grid>
                                     </SimpleForm>
                                   </Create>
                                 );
