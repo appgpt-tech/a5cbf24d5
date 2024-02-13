@@ -32,6 +32,7 @@ import {
   PasswordInput
 } from "react-admin";
 import { useRecordContext } from "react-admin";
+import { Grid } from '@mui/material';
 const ReadOnlyPasswordField = ({ record, source }) => {
 
   // You can customize the way you display the password here, e.g., mask it with asterisks
@@ -72,13 +73,22 @@ export const CardsList = () => (
 export const CardsEdit = () => (
                     <Edit title={<CardsTitle />}>
                       <SimpleForm>
-                          <TextInput source="cardName"   />
-<TextInput source="serial"   />
-<TextInput source="type"   />
-<TextInput source="rarity"   />
-<TextInput source="condition"   />
-<ImageInput source="imageUrl"   />
-<ReferenceInput source="set"  reference="Sets"   />
+                        <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 5 }}>
+                          <Grid item xs={4}>
+<TextInput source="cardName"   /></Grid>
+<Grid item xs={4}>
+<TextInput source="serial"   /></Grid>
+<Grid item xs={4}>
+<TextInput source="type"   /></Grid>
+<Grid item xs={4}>
+<TextInput source="rarity"   /></Grid>
+<Grid item xs={4}>
+<TextInput source="condition"   /></Grid>
+<Grid item xs={4}>
+<ImageInput source="imageUrl"   /></Grid>
+<Grid item xs={4}>
+<ReferenceInput source="set"  reference="Sets"   /></Grid>
+                        </Grid>
                       </SimpleForm>
                     </Edit>
                   );
@@ -86,13 +96,22 @@ export const CardsEdit = () => (
 export const CardsCreate = () => (
                                   <Create>
                                     <SimpleForm>
-                                        <TextInput source="cardName"   />
-<TextInput source="serial"   />
-<TextInput source="type"   />
-<TextInput source="rarity"   />
-<TextInput source="condition"   />
-<ImageInput source="imageUrl"   />
-<ReferenceInput source="set"  reference="Sets"   />
+                                      <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 5 }}>
+                                        <Grid item xs={4}>
+<TextInput source="cardName"   /></Grid>
+<Grid item xs={4}>
+<TextInput source="serial"   /></Grid>
+<Grid item xs={4}>
+<TextInput source="type"   /></Grid>
+<Grid item xs={4}>
+<TextInput source="rarity"   /></Grid>
+<Grid item xs={4}>
+<TextInput source="condition"   /></Grid>
+<Grid item xs={4}>
+<ImageInput source="imageUrl"   /></Grid>
+<Grid item xs={4}>
+<ReferenceInput source="set"  reference="Sets"   /></Grid>
+                                      </Grid>
                                     </SimpleForm>
                                   </Create>
                                 );
