@@ -32,6 +32,7 @@ import {
   PasswordInput
 } from "react-admin";
 import { useRecordContext } from "react-admin";
+import { Grid } from '@mui/material';
 const ReadOnlyPasswordField = ({ record, source }) => {
 
   // You can customize the way you display the password here, e.g., mask it with asterisks
@@ -68,9 +69,14 @@ export const SetsList = () => (
 export const SetsEdit = () => (
                     <Edit title={<SetsTitle />}>
                       <SimpleForm>
-                          <TextInput source="setName"   />
-<DateInput source="releaseDate"   />
-<NumberInput source="totalCards"   />
+                        <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 5 }}>
+                          <Grid item xs={4}>
+<TextInput source="setName"   /></Grid>
+<Grid item xs={4}>
+<DateInput source="releaseDate"   /></Grid>
+<Grid item xs={4}>
+<NumberInput source="totalCards"   /></Grid>
+                        </Grid>
                       </SimpleForm>
                     </Edit>
                   );
@@ -78,9 +84,14 @@ export const SetsEdit = () => (
 export const SetsCreate = () => (
                                   <Create>
                                     <SimpleForm>
-                                        <TextInput source="setName"   />
-<DateInput source="releaseDate"   />
-<NumberInput source="totalCards"   />
+                                      <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 5 }}>
+                                        <Grid item xs={4}>
+<TextInput source="setName"   /></Grid>
+<Grid item xs={4}>
+<DateInput source="releaseDate"   /></Grid>
+<Grid item xs={4}>
+<NumberInput source="totalCards"   /></Grid>
+                                      </Grid>
                                     </SimpleForm>
                                   </Create>
                                 );
