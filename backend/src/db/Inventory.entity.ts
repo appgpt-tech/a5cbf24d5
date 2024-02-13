@@ -7,13 +7,13 @@ export class InventoryEntity {
   id: number;
 
   @Column("integer",{nullable: true})
-product: number;
+user: number;
 
 @Column("integer",{nullable: true})
-quantity: number;
+card: number;
 
-@Column("integer",{nullable: true})
-lowStockThreshold: number;
+@Column("date",{nullable: true})
+dateAdded: Date;
 
 
 }
