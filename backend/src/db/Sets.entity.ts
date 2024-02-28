@@ -9,13 +9,13 @@ export class SetsEntity {
   id: number;
 
   @Column("text",{nullable: true})
-setName: string;
+SetName: string;
 
 @Column("date",{nullable: true})
-releaseDate: Date;
+ReleaseDate: Date;
 
 @Column("integer",{nullable: true})
-totalCards: number;
+TotalCards: number;
 
 
 }
