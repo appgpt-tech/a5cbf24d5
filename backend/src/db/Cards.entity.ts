@@ -9,7 +9,7 @@ export class CardsEntity {
   id: number;
 
   @Column("text",{nullable: true})
-cardName: string;
+CardName: string;
 
 @Column("text",{nullable: true})
 serial: string;
@@ -24,7 +24,7 @@ rarity: string;
 condition: string;
 
 @Column("text",{nullable: true})
-imageUrl: string;
+imageurl: string;
 
 @Column("integer",{nullable: true})
 set: number;
