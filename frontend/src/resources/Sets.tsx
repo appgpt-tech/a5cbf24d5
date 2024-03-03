@@ -54,15 +54,15 @@ const ListActions = () => (
 );
 const SetsTitle = () => {
   const record = useRecordContext();
-  return <span>Sets {record ? `"${ record.id }"` : ""}</span>;
+  return <span>Sets {record ? `"${ record.setName }"` : ""}</span>;
 };
 
 export const SetsList = () => (
       <List actions={<ListActions  />} filters={ResourceFilters} >
         <DatagridConfigurable>
-          <TextField source="SetName" />
-<DateField source="ReleaseDate" />
-<NumberField source="TotalCards" /><EditButton />
+          <TextField source="setName" />
+<DateField source="releaseDate" />
+<NumberField source="totalCards" /><EditButton />
 
         </DatagridConfigurable>
       </List>
@@ -73,11 +73,11 @@ export const SetsEdit = () => (
                       <SimpleForm>
                         <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 5 }}>
                           <Grid item xs={4}>
-<TextInput source="SetName"   /></Grid>
+<TextInput source="setName"   /></Grid>
 <Grid item xs={4}>
-<DateInput source="ReleaseDate"   /></Grid>
+<DateInput source="releaseDate"   /></Grid>
 <Grid item xs={4}>
-<NumberInput source="TotalCards"   /></Grid>
+<NumberInput source="totalCards"   /></Grid>
                         </Grid>
                       </SimpleForm>
                     </Edit>
@@ -88,11 +88,11 @@ export const SetsCreate = () => (
                                     <SimpleForm>
                                       <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 5 }}>
                                         <Grid item xs={4}>
-<TextInput source="SetName"   /></Grid>
+<TextInput source="setName"   /></Grid>
 <Grid item xs={4}>
-<DateInput source="ReleaseDate"   /></Grid>
+<DateInput source="releaseDate"   /></Grid>
 <Grid item xs={4}>
-<NumberInput source="TotalCards"   /></Grid>
+<NumberInput source="totalCards"   /></Grid>
                                       </Grid>
                                     </SimpleForm>
                                   </Create>
