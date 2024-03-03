@@ -15,7 +15,7 @@ user: number;
 card: number;
 
 @Column("date",{nullable: true})
-DateAdded: Date;
+dateAdded: Date;
 
 
 }
