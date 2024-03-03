@@ -17,7 +17,7 @@ import { InventoryList, InventoryCreate, InventoryEdit} from "./resources/Invent
 import { WishlistList, WishlistCreate, WishlistEdit} from "./resources/Wishlist";
 import UsersIcon from "@mui/icons-material/Person";
 import CardsIcon from "@mui/icons-material/Collections";
-import SetsIcon from "@mui/icons-material/Category";
+import SetsIcon from "@mui/icons-material/CollectionsBookmark";
 import InventoryIcon from "@mui/icons-material/Inventory";
 import WishlistIcon from "@mui/icons-material/Favorite"; 
 // SUPERTOKENS
@@ -85,19 +85,19 @@ const App = () => (
 list={UsersList}
 create={UsersCreate}
 edit={UsersEdit}
-recordRepresentation="id"
+recordRepresentation="userName"
 icon={UsersIcon}/>
 <Resource name="Cards" options={{label:"Cards"}} 
 list={CardsList}
 create={CardsCreate}
 edit={CardsEdit}
-recordRepresentation="id"
+recordRepresentation="cardName"
 icon={CardsIcon}/>
 <Resource name="Sets" options={{label:"Sets"}} 
 list={SetsList}
 create={SetsCreate}
 edit={SetsEdit}
-recordRepresentation="id"
+recordRepresentation="setName"
 icon={SetsIcon}/>
 <Resource name="Inventory" options={{label:"Inventory"}} 
 list={InventoryList}
