@@ -8,9 +8,69 @@ import postgrestRestProvider from "@promitheus/ra-data-postgrest";
 import qs from 'qs';
 
 const fieldConfig = {
-    Users: [
+    books: [
   {
-    "field": "userName",
+    "field": "bookTitle",
+    "datatype": "String"
+  },
+  {
+    "field": "issueDate",
+    "datatype": "DateTime"
+  },
+  {
+    "field": "isbn",
+    "datatype": "String"
+  },
+  {
+    "field": "genre",
+    "datatype": "String"
+  },
+  {
+    "field": "author",
+    "datatype": "Integer"
+  },
+  {
+    "field": "id",
+    "datatype": "Integer"
+  }
+],
+authors: [
+  {
+    "field": "name",
+    "datatype": "String"
+  },
+  {
+    "field": "birthdate",
+    "datatype": "DateTime"
+  },
+  {
+    "field": "nationality",
+    "datatype": "String"
+  },
+  {
+    "field": "books",
+    "datatype": "Integer"
+  },
+  {
+    "field": "id",
+    "datatype": "Integer"
+  }
+],
+members: [
+  {
+    "field": "memberID",
+    "datatype": "String"
+  },
+  {
+    "field": "name",
+    "datatype": "String"
+  },
+  {
+    "field": "address",
+    "datatype": "String"
+  },
+  {
+    "field": "phoneNumber",
     "datatype": "String"
   },
   {
@@ -18,73 +78,7 @@ const fieldConfig = {
     "datatype": "String"
   },
   {
-    "field": "id",
-    "datatype": "Integer"
-  }
-],
-Cards: [
-  {
-    "field": "cardName",
-    "datatype": "String"
-  },
-  {
-    "field": "serial",
-    "datatype": "String"
-  },
-  {
-    "field": "type",
-    "datatype": "String"
-  },
-  {
-    "field": "rarity",
-    "datatype": "String"
-  },
-  {
-    "field": "condition",
-    "datatype": "String"
-  },
-  {
-    "field": "imageUrl",
-    "datatype": "String"
-  },
-  {
-    "field": "set",
-    "datatype": "Integer"
-  },
-  {
-    "field": "id",
-    "datatype": "Integer"
-  }
-],
-Sets: [
-  {
-    "field": "setName",
-    "datatype": "String"
-  },
-  {
-    "field": "releaseDate",
-    "datatype": "DateTime"
-  },
-  {
-    "field": "totalCards",
-    "datatype": "Integer"
-  },
-  {
-    "field": "id",
-    "datatype": "Integer"
-  }
-],
-Inventory: [
-  {
-    "field": "user",
-    "datatype": "Integer"
-  },
-  {
-    "field": "card",
-    "datatype": "Integer"
-  },
-  {
-    "field": "dateAdded",
+    "field": "joinDate",
     "datatype": "DateTime"
   },
   {
@@ -92,18 +86,22 @@ Inventory: [
     "datatype": "Integer"
   }
 ],
-Wishlist: [
+loans: [
   {
-    "field": "user",
+    "field": "member",
     "datatype": "Integer"
   },
   {
-    "field": "card",
-    "datatype": "Integer"
-  },
-  {
-    "field": "dateInserted",
+    "field": "loanDate",
     "datatype": "DateTime"
+  },
+  {
+    "field": "dueDate",
+    "datatype": "DateTime"
+  },
+  {
+    "field": "bookID",
+    "datatype": "Integer"
   },
   {
     "field": "id",
